@@ -19,3 +19,4 @@ This wiki also contains documentation on:
 * [Genesis Block](https://github.com/aionnetwork/aion/wiki/Genesis-Block) - description of the network genesis block
 * [Database](https://github.com/aionnetwork/aion/wiki/Database) - storage configuration options
 * [Internal Miner](https://github.com/aionnetwork/aion/wiki/Internal-Miner) - enabling and disabling the internal miner and collecting AION
+* [Command Line Interface](https://github.com/aionnetwork/aion/wiki/Command-Line-Interface) - using the command line options to interact with the network
