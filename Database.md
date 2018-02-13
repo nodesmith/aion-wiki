@@ -37,6 +37,25 @@ If you are changing vendors, you must either:
 or
 * changes the path of the database to a new valid location. 
 
+### Additional configuration options in ***aion-v0.1.9*** and later versions
+
+Starting with version ***0.1.9*** you can edit the kernel configuration file to customize each of the following options:
+```xml
+<db>
+    <path>database</path>
+    <vendor>leveldb</vendor>
+    <enable_heap_cache>true</enable_heap_cache>
+    <enable_auto_commit>false</enable_auto_commit>
+    <enable_db_cache>false</enable_db_cache>
+    <enable_db_compression>false</enable_db_compression>
+    <max_heap_cache_size>0</max_heap_cache_size>
+</db>
+```
+3. The **enable_heap_cache** tag is used for telling the kernel to store data in a LRU in-memory cache for fast access when it is set to `true` or to not use the in-memory cache when it is set to `false`.
+4. The **enable_auto_commit** tag is for customizing the behavior for commiting data to the database inside the code. When set to `true` changes are committed to the database directly. When set to `false` data is committed only when an explicit commit call is made by the code. **Note** that when `enable_heap_cache = false` by default `enable_auto_commit = true` regardless of the setting in the config file, since without the LRU cache, changes would be lost if not saved to the database.
+5. The **enable_db_cache** and **enable_db_compression** tags customize the behaviour of the database to use or not use its internal caching and compression implementations.
+6. The **max_heap_cache_size** tag customizes the behaviour of the LRU cache when enabled. When `max_heap_cache_size = 0`, the setting is interpreted as unlimited (depending on the memory availability). Otherwise the given number determines the maximum number of entries kept in the LRU cache.
+
 ---
 ## Contents
 
@@ -46,7 +65,7 @@ The Aion blockchain data is stored in several folders each representing a key-va
 - `state` is used for the state trie
 - `transaction` keeps the data related to transactions
 
-When the program is started it will print out its topmost known block number. In the case of an empty database, this will be the genesis block with a messages like:
+When the program is started it will print out its topmost known block number. In the case of an empty database, this will be the genesis block with a message like:
 
 ```
 INFO GEN - loaded genesis block <num=0, root=4f512c6f...>
@@ -58,12 +77,12 @@ For a database that has some stored data, the message will look something like t
 INFO GEN - loaded block <num=33, root=a9182787... l=32>
 ```
 
-To check that data was correctly written to the database stop the program (Ctrl+C) and restart it (./aion.sh). Compare the starting block number between the two runs. If any blocks were mined or synchronised while the program was running, the block number at the start of the program should reflect this change.
+To check that data was correctly written to the database stop the program (Ctrl+C) and restart it (./aion.sh). Compare the starting block number between the two runs. If any blocks were mined or synchronized while the program was running, the block number at the start of the program should reflect this change.
 
 ---
 ## Recovery
 
-Aion already has some built in methods for attempting to recover from corrupted data inside the database. If the logs show that database recovery is in progress, please allow the program to complete the recovery process.
+Aion already has some built-in methods for attempting to recover from corrupted data inside the database. If the logs show that database recovery is in progress, please allow the program to complete the recovery process.
 
 If the recovery process failed, or you prefer to restart from genesis, do the following:
 1. Delete the database folder.
