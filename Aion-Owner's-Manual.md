@@ -88,7 +88,7 @@ After account creation, an associated keystore file is generated and placed in t
 
 > **Note** You should backup the keystore folder if you want to keep the generated keys.
 
-* Generating peer Id (optional)
+**Generating peer Id (optional)**
 
 > **Note** Aion kernel versions below 0.1.9 require a node Id to be placed in the configuration file. For version 0.1.9 and higher, this step is optional since a temporary unique Id will be assigned to the node at runtime.
 
