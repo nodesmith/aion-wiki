@@ -1,7 +1,8 @@
 **Basics** 
 - [Home](https://github.com/aionnetwork/aion/wiki)
 - [Aion White Papers](https://aion.network/whitepapers.html)
-<!-- - [Releases](https://github.com/aionnetwork/aion/releases)-->
+- [Releases](https://github.com/aionnetwork/aion/releases)
+- [Initial Codebase Contributers](https://github.com/aionnetwork/aion/wiki/Contributors)
 
 **Kernel Configuration**
 - [Build your Aion network](https://github.com/aionnetwork/aion/wiki/Build-your-Aion-network)
