@@ -86,9 +86,7 @@ Account addresses are required for mining and sending transactions. An address i
 
 After account creation, an associated keystore file is generated and placed in the aion/keystore directory. Each keystore file name contains the address and can be referred to in case of lost account address.
 
-Note
-
-You should backup the keystore folder if you want to keep the generated keys.
+> **Note** You should backup the keystore folder if you want to keep the generated keys.
 
 * Generating peer Id (optional)
 
@@ -154,7 +152,7 @@ Go to the aion directory and run the following command in the terminal to launch
 <show-status>true</show-status>
 ```
 
-Alternatively, you can open another terminal and run the command below to view connected peers:
+> Alternatively, you can open another terminal and run the command below to view connected peers:
 
 ```
 netstat -antp | grep java
