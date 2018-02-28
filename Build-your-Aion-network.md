@@ -23,11 +23,15 @@ git submodule foreach git checkout master
 git submodule foreach git pull origin master
 
 ## check your environment settings are correct, including the Ant execute path, java execute PATH link to the JDK9 folder,and the JAVA_HOME. ##
-
+c
 ## then you should be able to build ##
 ant pack_build
 or 
 ant
+```
+## verify the code go through the test case
+```
+ant test
 ```
 
 ### After build
