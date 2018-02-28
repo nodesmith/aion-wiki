@@ -21,4 +21,4 @@ Here is the list of world regions and the seed nodes IP addresses representing t
 ```
 
 ## SUMMARY
-Aion seed nodes are the best sup lay for initial synchronization and time-check. 
+Aion seed nodes are the best supply for initial synchronization and time-check. 
