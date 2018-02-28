@@ -26,6 +26,8 @@ git submodule foreach git pull origin master
 
 ## then you should be able to build ##
 ant pack_build
+or 
+ant
 ```
 
 ### After build
