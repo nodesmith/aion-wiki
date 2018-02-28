@@ -450,3 +450,99 @@ eth.sendTransaction({from:’0x1234123412341234123412341234123412341234123412341
 ### CREATE WALLET BACKUP OR IMPORT ACCOUNT
 
 We recommend you keep track of your keystore files and copy them over to the new binary to successfully import/export accounts. Fore more details, refer to “create wallet backup” under “Configuration” of the “Setting up your Aion node” section.
+
+# Appendix
+
+## Error Handling
+
+To report any issues after running and using the Aion Kernel, please find the following resources:
+
+* Github (https://github.com/aionnetwork): you can log tickets and report bugs/issues on the AionNetwork Github page.
+
+* Forum (https://forum.aion.network/): check out our forum to chat with the Aion community and moderators to stay up to date with latest updates, issues, resolutions and discussions.
+
+* Email us at support@aion.network for any specific questions
+
+## FAQs
+
+**General**
+
+* Where do I start? Go to our releases page to download the latest binary and then go to the Getting Started section to set up your Aion node.
+
+* How can I help?
+
+You can directly contribute to Aion during our testnet phase by running a node during our testnet phase. We encourage all users to actively participate in the various error handling channels we have available to help us fix any issues. Additionally, there will be many other areas community members can contribute to the project in the near future; from content translations, posting feature reviews/requests, reinforcing community engagement, to ‘retweets’, writing blog posts, and industry analysis.
+
+* How do I find the latest version and how often does it get updated?
+
+Each week, the latest version of the binary will be sent out via the support email to the signed-up users.
+
+* Can I run this on a virtual machine, raspberry pi, vagrant box?
+
+Yes, but they are not supported. If you follow the instructions of setting it up with a standard VM, it should work without problems. The Aion Kenel is untested on Raspberry Pi and will not be supported for mining (could work for syncing and light mining).
+
+* Where do I report errors?
+
+Refer to the previous section of error handling for details.
+
+* Is the Aion Token worth anything?
+
+During the testnet phase, the Aion tokens are not worth anything. However, once the open mainnet is launched, the Aion tokens being mined will have actual market value. If there are no issues with that network, those tokens will be part of the Aion netowrk.
+
+* Is there a bounty/reward program?
+
+Yes, there will be a reward program to incentivize early miners and users of Aion to actively participate in the early stages of the mainnet launch. More details on the bounty structure will be released shortly.
+
+**Installation**
+
+* How do I install Aion and web3 interface?
+
+Please refer to the “Installation” section under “Setting up your Aion node” for the detailed steps.
+
+* How do I monitor the Testnet installation?
+
+No installation, it is a compiled binary therefore it is just executed.
+
+* What are the system requirements to install and run the Kernel?
+
+You will need Ubuntu 16.04 or a later version. Please refer to the “Setting up your Aion node” section for more details.
+
+**Mining**
+
+* How do I know that I’m mining?
+
+If you are running a node on version 0.1.11, you will see a CPU output with “x” number of solutions produced per second.
+
+* How many CPU threads should I allocate for my mining node?
+
+You should allocate between 1 to a maximum of 75% of capacity for running a node. Anything above the maximum is not advised.
+
+* How many GPU threads/blocks should I allocate for my mining node?
+
+These values will largely depend on your GPU; benchmarking on a 1050 TI has found a good balance will be reached with 64 blocks and 64 threads per block. We recommend running the CUDA miner in benchmark mode with a variety of parameters to find the best set of parameters for your GPU.
+
+**Synchronization**
+
+* How do I know I am syncing?
+
+You should see the following output: 
+
+```
+18-02-22 11:33:33.148 INFO SYNC [sync-import]: <import-best num=818 hash=ef5b2b txs=0>
+
+18-02-22 11:33:33.390 INFO SYNC [sync-import]: <import-best num=819 hash=09b0bc txs=0>
+
+18-02-22 11:33:33.533 INFO SYNC [sync-import]: <import-best num=820 hash=58f004 txs=0>
+```
+
+* How much longer do I have to sync for?
+
+In the config file you can change log of SYNC to Debug and can find out the best block of the node you are syncing with.
+
+* I am getting an error that I’m not synced, what should I do to get synced again?
+
+Restart the node (Ctrl+C to stop, ./aion.sh to start) OR you may need to delete the database folder if the database is corrupted/you are on a side chain.
+
+* What does this error “ERROR SYNC [pool-3-thread-6]: <res-headers decode-msg msg-bytes=1216490 from-node=-39373317 >” mean?
+
+This means your node has stopped syncing and has created an “uncle” on your local node. Please see the question above to get synced again.
