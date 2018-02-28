@@ -29,7 +29,7 @@ ant pack_build
 or 
 ant
 ```
-## verify the code
+### Verify the code
 you can go through the test cases by
 ```
 ant test
