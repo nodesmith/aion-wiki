@@ -337,11 +337,11 @@ After successfully setting up your Aion node, you can start using Aion using the
 
 Following are the prerequisites for building aion web3 API. You can download and install each item by following the provided link. 
 
-* node.js version 8.9.1 (https://nodejs.org/en/download/)[download and install]
+* node.js version 8.9.1 (https://nodejs.org/en/download/) [download and install]
 
 * npm version 5.5.1 (Typically included with node installation.) 
 
-* gulp version 3.9.1 (https://libraries.io/npm/gulp/3.9.1)[download and install]
+* gulp version 3.9.1 (https://libraries.io/npm/gulp/3.9.1) [download and install]
 
 **Installation**
 
