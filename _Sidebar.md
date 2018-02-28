@@ -12,7 +12,7 @@
 - [Database](https://github.com/aionnetwork/aion/wiki/Database) 
 - [Internal Miner](https://github.com/aionnetwork/aion/wiki/Internal-Miner)
 - [Genesis Block](https://github.com/aionnetwork/aion/wiki/Genesis-Block)
-- [AION Seed Nodes](https://github.com/aionnetwork/aion/wiki/AION-Seed-nodes)
+- [Aion Seed Nodes](https://github.com/aionnetwork/aion/wiki/Aion-Seed-nodes)
 
 **Tutorials**
 - [Importing Accounts](https://github.com/aionnetwork/aion/wiki/Importing-Accounts)
