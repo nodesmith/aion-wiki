@@ -42,3 +42,4 @@ This wiki also contains documentation on:
 * [Internal Miner](https://github.com/aionnetwork/aion/wiki/Internal-Miner) - enabling and disabling the internal miner and collecting AION
 * [Command Line Interface](https://github.com/aionnetwork/aion/wiki/Command-Line-Interface) - using the command line options to interact with the network
 * [Build you Aion network](https://github.com/aionnetwork/aion/wiki/Build-your-Aion-network) - the guide for build your Aion network step by step.
+* [Previous Versions](https://github.com/aionnetwork/aion/wiki/Previous-Versions) - guide for using aion-v0.1.8 or if you want a permanent id to be used by peers.
