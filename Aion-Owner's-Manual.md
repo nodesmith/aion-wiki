@@ -92,11 +92,9 @@ You should backup the keystore folder if you want to keep the generated keys.
 
 * Generating peer Id (optional)
 
-Note
+> **Note** Aion kernel versions below 0.1.9 require a node Id to be placed in the configuration file. For version 0.1.9 and higher, this step is optional since a temporary unique Id will be assigned to the node at runtime.
 
-Aion kernel versions below 0.1.9 require a node Id to be placed in the configuration file. For version 0.1.9 and higher, this step is optional since a temporary unique Id will be assigned to the node at runtime.
-
-A permanent node Id can be used by peers to connect to each other. Instructions for generating and assigning a node Id are as follows: 1. Download the Id generation script generateId.sh from here.
+> A permanent node Id can be used by peers to connect to each other. Instructions for generating and assigning a node Id are as follows: 1. Download the Id generation script generateId.sh from here.
 
 2. Open a terminal and add executable permissions to the script using the following command.
 
@@ -150,9 +148,7 @@ Go to the aion directory and run the following command in the terminal to launch
 ./aion.sh
 ```
 
-Note
-
-You can set show-status to true in your config file to prompt the network to display connected peers.
+> **Note** You can set show-status to true in your config file to prompt the network to display connected peers.
 
 ```
 <show-status>true</show-status>
