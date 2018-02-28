@@ -328,3 +328,125 @@ tar xf aion-solo-pool-<VERSION>.tar.gz
 ```
 
 8. The pool is now ready to accept incoming client connections and to distribute work to clients.
+
+# Using Aion
+
+After successfully setting up your Aion node, you can start using Aion using the Web3 console. The Web3 console facilitates the usage of Web3 application programming interface on top of Aion network.
+
+**Prerequisites**
+
+Following are the prerequisites for building aion web3 API. You can download and install each item by following the provided link. 
+
+* node.js version 8.9.1 (download and install)
+
+* npm version 5.5.1 (Typically included with node installation.) ● gulp version 3.9.1 (download and install)
+
+**Installation **
+
+Web3 console can be downloaded by visiting its repository on GitHub. You can download a zip file containing the repository by pressing the “Clone or download” button and extracting the zip file contents into your desired directory. Alternatively, the repository can be cloned through the terminal using:
+
+```
+git clone https://github.com/aionnetwork/aion_web3
+```
+
+Navigate to the aion_web3 directory and run the following commands:
+
+```
+npm install gulp build
+```
+
+Or
+
+```
+npm install --save aion-web3
+```
+
+## API Use
+
+You can include Aion’s web3 API in your application using one of these methods:
+
+* Web use
+
+```
+include dist/web3.min.js in your html file
+```
+
+* Node use:
+
+```
+var Web3 = require('aion-web3') var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+```
+
+## Running Web3 console
+
+Navigate to the aion folder and run the kernel using:
+
+```
+./aion.sh
+```
+
+Navigate to the aion_web3 folder and and run the console in another terminal:
+
+```
+node console.js
+```
+
+You can now interact with Aion kernel using the console. Below are some sample operations that can be performed using the console.
+
+### VIEW LOCAL ACCOUNTS
+
+You can view the accounts that are created and stored locally using the following command.
+
+```
+eth.accounts
+```
+
+Any of the accounts shown can be used to perform mentioned commands below. Refer to the configuration section of kernel for more information regarding creating accounts.
+
+### CHECK YOUR BALANCE
+
+In order to view the balance in an account, run the following command and replace the 0xacc with account address:
+
+```
+eth.getBalance('{0xacc}')
+```
+
+**E.g.**
+
+```
+eth.getBalance(‘0x1234123412341234123412341234123412341234123412341234123412341234’)
+```
+
+### UNLOCK YOUR ACCOUNT
+
+In order to make a transaction, the sender should first unlock their account. In order to unlock an account, run the following command and replace the 0xacc, pwd, secondsToUnlock with account address, associated password and unlock duration in milliseconds:
+
+```
+personal.unlockAccount('{0xacc}', '{pw}', {secondsToUnlock})
+```
+
+**E.g.**
+
+```
+personal.unlockAccount(‘0x1234123412341234123412341234123412341234123412341234123412341234’, ‘abc’, 60000)
+```
+
+If unlocking is successful, the output will be true; otherwise false.
+
+### TRANSFER AION
+
+You can send a transaction from one account to another with a specified value. It is important to note that the account of sender should be unlocked before making the transfer. Replace {0xacc_from}, {0xacc_to}, {amount_to_transfer} with the sender’s unlocked account address, recipient’s account address, and amount to transfer.
+
+```
+eth.sendTransaction({from: '{0xacc_from}', to: '{0xacc_to}', value: {amount_to_transfer}})
+```
+
+**E.g.**
+
+```
+eth.sendTransaction({from:’0x1234123412341234123412341234123412341234123412341234123412341234’, to: ‘0xabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd’, value: 10000)
+```
+
+### CREATE WALLET BACKUP OR IMPORT ACCOUNT
+
+We recommend you keep track of your keystore files and copy them over to the new binary to successfully import/export accounts. Fore more details, refer to “create wallet backup” under “Configuration” of the “Setting up your Aion node” section.
