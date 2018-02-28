@@ -230,13 +230,13 @@ Here is an example of running a benchmark on your GPU (GPU 0, CUDA-Tromp solver)
 -h [help] Print this help message and quits -l [location] Stratum server:port -u [username] Username (aion address) -a [port] Local API port (default: 0 = do not bind) -d [level] Debug print level (0 : print all, 5 : fatal only, default: 2) -b [ --benchmark ] [=arg(=200)] Run in benchmark mode (default: 200 iterations)
 ```
 
-Extra parameters for CPU miner:
+**Extra parameters for CPU miner:**
 
 ```
 -t [threads] Number of CPU threads -e [ext] Force CPU ext (0 = SSE2, 1 = AVX, 2 = AVX2)
 ```
 
-Extra parameters for CUDA miner:
+**Extra parameters for CUDA miner:**
 
 ```
 -ci CUDA info -cv CUDA solver (0 = djeZo, 1 = tromp, default=1)
