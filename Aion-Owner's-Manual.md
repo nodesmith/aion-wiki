@@ -341,7 +341,7 @@ Following are the prerequisites for building aion web3 API. You can download and
 
 * npm version 5.5.1 (Typically included with node installation.) ● gulp version 3.9.1 (download and install)
 
-**Installation **
+**Installation**
 
 Web3 console can be downloaded by visiting its repository on GitHub. You can download a zip file containing the repository by pressing the “Clone or download” button and extracting the zip file contents into your desired directory. Alternatively, the repository can be cloned through the terminal using:
 
