@@ -41,3 +41,4 @@ This wiki also contains documentation on:
 * [Database](https://github.com/aionnetwork/aion/wiki/Database) - storage configuration options
 * [Internal Miner](https://github.com/aionnetwork/aion/wiki/Internal-Miner) - enabling and disabling the internal miner and collecting AION
 * [Command Line Interface](https://github.com/aionnetwork/aion/wiki/Command-Line-Interface) - using the command line options to interact with the network
+* [Build you Aion network](https://github.com/aionnetwork/aion/wiki/Build-your-Aion-network) - the guide for build your Aion network step by step.
