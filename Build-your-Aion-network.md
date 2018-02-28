@@ -35,9 +35,9 @@ cd pack
 ```
 you will see a file named like this
 ```
-aion-v<KERNEL VERSION>-<BUILD DATE>-<GIT REVISION>.tar.bz2
+aion-v<KERNEL VERSION>-<GIT REVISION>-<BUILD DATE>.tar.bz2
 
-eg. aion-v0.1.12-2018-02-28-2c5119a.tar.bz2
+eg. aion-v0.1.12-2c5119a-2018-02-28.tar.bz2
 ``` 
 
 ### Execute your Aion network
