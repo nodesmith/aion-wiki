@@ -1,7 +1,7 @@
 ### Prerequisites
 
 * [Ubuntu 16.04 or later version](http://releases.ubuntu.com/16.04/)
-* [Java SE Development Kit 9](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* [Oracle Java SE Development Kit 9](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 * [Apache Ant 1.10](http://ant.apache.org/bindownload.cgi)
 
 ### How to build
