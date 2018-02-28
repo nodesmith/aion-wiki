@@ -266,9 +266,9 @@ The Aion mining pool should be used in conjunction with the Aion mining client o
 sudo apt-get update
 
 sudo apt-get install build-essential
-```
 
-* make
+make
+```
 
 * Included by default with Ubuntu desktop, may need to be installed separately in Ubuntu server. Run the following command to install:
 
@@ -282,9 +282,9 @@ Follow these steps to run the mining pool:
 
 2. Update the consensus section:
 
-a. Mining: should be set to false to disable internal mining
+a. **Mining:** should be set to false to disable internal mining
 
-b. Miner-address: the address which will receive mined block rewards. The address is a 64 character (32 byte) hex string containing the public key and address of an account.
+b. **Miner-address:** the address which will receive mined block rewards. The address is a 64 character (32 byte) hex string containing the public key and address of an account.
 
 **E.g.**
 
