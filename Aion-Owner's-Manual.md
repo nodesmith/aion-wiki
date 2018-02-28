@@ -50,7 +50,7 @@ Below are the requirements for setting up and running the kernel.
 
 ### KERNEL
 
-**Getting the kernel**
+_**Getting the kernel**_
 
 The latest version of Aion kernel will be constantly released during the Public Testnet phase. You can acquire access to the most recent Aion binary file here.
 
@@ -68,7 +68,7 @@ A folder named aion will be created in the chosen directory.
 
 **Configuration**
 
-* Creating accounts
+_**Creating accounts**_
 
 Account addresses are required for mining and sending transactions. An address is a 64-character (32 byte) hex string, which contains the public key of an account. You can create accounts on the kernel by following these steps:
 
@@ -88,7 +88,7 @@ After account creation, an associated keystore file is generated and placed in t
 
 > **Note** You should backup the keystore folder if you want to keep the generated keys.
 
-**Generating peer Id (optional)**
+_**Generating peer Id (optional)**_
 
 > **Note** Aion kernel versions below 0.1.9 require a node Id to be placed in the configuration file. For version 0.1.9 and higher, this step is optional since a temporary unique Id will be assigned to the node at runtime.
 
@@ -122,7 +122,7 @@ gedit config.xml
 <id>my-new-id-value-is-set-here-12345678</id>
 ```
 
-* Setting up seed nodes (optional)
+_**Setting up seed nodes (optional)**_
 
 Your kernel will have access to the seed nodes by default. You should not remove these nodes from the configuration. Additional peers can be added to configuration by updating the nodes section and including peer id, port, and IP. Peer Id for a node should be generated using the steps mentioned above.
 
@@ -130,7 +130,7 @@ Your kernel will have access to the seed nodes by default. You should not remove
 <nodes> <node>p2p://PEER_ID@IP:PORT</node> </nodes>
 ```
 
-* Setting up IP
+_**Setting up IP**_
 
 To allow connection among peers the ip section of the config file should be updated to include a public IP. If you are unsure about having a public IP, set it to 0.0.0.0.
 
@@ -138,7 +138,7 @@ To allow connection among peers the ip section of the config file should be upda
 <p2p> <ip>0.0.0.0</ip> <port>30303</port> </p2p>
 ```
 
-**Launch kernel**
+_**Launch kernel**_
 
 Go to the aion directory and run the following command in the terminal to launch the kernel.
 
