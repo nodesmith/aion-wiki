@@ -247,3 +247,84 @@ Extra parameters for CUDA miner:
 
 -ct Number of threads per block (per device)
 ```
+
+### MINING POOL
+
+The Aion mining pool should be used in conjunction with the Aion mining client on the Aion testnet.
+
+> **Note** This is an Aion mining pool designed to be used in conjunction with the Aion mining client on the Aion testnet. This mining pool has been specifically designed to be used only for solo mining on the Aion test network; it is not suitable to be used as a public mining pool and should not be deployed in that configuration.
+
+**Prerequisites**
+
+* Aion kernel
+
+* Python v2.7
+
+* Included by default with Ubuntu desktop, may need to be installed separately in Ubuntu server. Run the following commands to install:
+
+```
+sudo apt-get update
+
+sudo apt-get install build-essential
+```
+
+* make
+
+* Included by default with Ubuntu desktop, may need to be installed separately in Ubuntu server. Run the following command to install:
+
+```
+sudo apt-get install python2.7 python-dev
+```
+
+Follow these steps to run the mining pool:
+
+1. Open the Aion configuration file located in aion/config/config.xml
+
+2. Update the consensus section:
+
+a. Mining: should be set to false to disable internal mining
+
+b. Miner-address: the address which will receive mined block rewards. The address is a 64 character (32 byte) hex string containing the public key and address of an account.
+
+**E.g.**
+
+```
+<consensus>
+
+<mining>false</mining>
+
+<miner-address>1234123412341234123412341234123412341234123412341234123412341234</miner-address>
+
+<cpu-mine-threads>8</cpu-mine-threads>
+
+<extra-data>AION</extra-data>
+
+</consensus>
+```
+
+3. Download the latest prepackaged aion_solo_pool from its release page.
+
+4. Navigate to the download directory, open a terminal and run the following command to unpack the file:
+
+```
+tar xf aion-solo-pool-<VERSION>.tar.gz
+```
+
+5. Run the configure script to download and build all of the pool dependencies and place them into the current directory. This script may take several minutes to complete, however it must only be run once. Configure script can be run using:
+
+```
+./configure.sh
+```
+6. Run the solo_pool using the quickstart run script. This script will start and stop both the pool and redis server.
+
+```
+./run_quickstart.sh
+```
+
+7. Open another terminal in aion directory and start the kernel:
+
+```
+./aion.sh
+```
+
+8. The pool is now ready to accept incoming client connections and to distribute work to clients.
