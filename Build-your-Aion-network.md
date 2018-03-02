@@ -8,7 +8,7 @@
 
 1. Clone the Aion project
 ```
-git clone https://github.com/aionnetwork/aion 
+git clone --recursive https://github.com/aionnetwork/aion 
 ```
 
 2. Go into the folder 
@@ -16,34 +16,19 @@ git clone https://github.com/aionnetwork/aion
 cd aion
 ```
 
-3. Grab latest commits from server 
-```
-git submodule update --init --recursive
-```
-
-4. Above command will set current branch to detached HEAD. set back to master. 
-```
-git submodule foreach git checkout master
-```
-
-5. When you want to update the latest submodule codebase, otherwise the fresh build can ignore this step. 
-```
-git submodule foreach git pull origin master
-```
-
-6. Check your environment settings are correct, including the Ant execute path, java execute PATH link to the JDK9 folder,and the JAVA_HOME. Then you should be able to build 
+3. Check your environment settings are correct, including the Ant execute path, java execute PATH link to the JDK9 folder,and the JAVA_HOME. Then you should be able to build 
 ```
 ant pack_build
 or 
 ant
 ```
-7. Verify the code
+4. Verify the code
 You can go through the test cases by:
 ```
 ant test
 ```
 
-8. After build
+5. After build
 check your **pack** folder
 ```
 cd pack
