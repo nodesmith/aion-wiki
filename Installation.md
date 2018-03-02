@@ -15,4 +15,4 @@ tar xvjf aion-{@version}.tar.bz2
 cd aion
 ```
 
-Please make sure you have the network configurations set as needed before launching the kernel. Steps for setting up network configurations and launching the kernel can be found [here](https://github.com/aionnetwork/aion/wiki/Aion-Network-Configuration)
+Please make sure you have the network configurations set as needed before launching the kernel. Steps for setting up network configurations and launching the kernel can be found [here](https://github.com/aionnetwork/aion/wiki/Aion-Network-Configuration).
