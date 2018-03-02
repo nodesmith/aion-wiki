@@ -50,7 +50,7 @@ This newly made configuration will not have access to seed nodes by default. In 
 
 You are welcome to add other seed nodes (not solely restricted to what is shown above).
 
-## Launch Kernel 
+## Launch the Kernel 
 
 In a terminal, from the aion directory, run: 
 
