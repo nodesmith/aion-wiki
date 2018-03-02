@@ -1,3 +1,5 @@
+## Configure the Network
+
 <!--In a terminal, run the command below to generate a default configuration: `./aion.sh -c`-->
 
 To receive tokens for mining blocks, you first need to create an account using:
