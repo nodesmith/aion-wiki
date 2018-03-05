@@ -1,6 +1,3 @@
-
-
-how to recover from sidechain
 v0.1.14 enforced the total difficulty check. if the block found by node , the total diff is less than the main net, the new block propagation will be rejected.
 
 steps to identify if node are in sidechain.
