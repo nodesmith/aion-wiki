@@ -4,8 +4,9 @@ Steps to identify if node are in sidechain.
 
     turn on p2p debug in config.xml
 
-
     find "p2p-status" section inside log file.
+
+![p2p-status](images/p2p-status.png)
 
     find your node id in p2p-status.
 
