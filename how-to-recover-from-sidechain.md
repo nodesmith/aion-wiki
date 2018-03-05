@@ -2,7 +2,15 @@ v0.1.14 enforced the total difficulty check. if the block found by node , the to
 
 Steps to identify if node are in sidechain.
 
-    turn on p2p debug in config.xml
+    turn on p2p "show-log" in config.xml
+	<p2p>
+			<ip>127.0.0.1</ip>
+			<port>30303</port>
+			<discover>true</discover>
+			<show-log>true</show-log>
+			<show-status>true</show-status>
+	</p2p>
+
 
     find "p2p-status" section inside log file.
 
