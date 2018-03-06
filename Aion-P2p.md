@@ -14,6 +14,8 @@
   2. control - byte
   3. action - byte
   4. body len - byte[4]
+     * Current max body length is 400 MB per message. Any message exceeds max length would not be routed to body read routine.   
+
 
 ``` 
 |<-    version    ->|<- ctrl->|<- act ->|<-             body len              ->|       
@@ -24,12 +26,9 @@
 
 #### Routes
 
-Header encode / decode design is 
-
 Based on decoded header we have route table. Routes to handlers is 1 to many relation.
 route function<br>
 ` return (ver << 16) | (ctrl << 8) | action; `
-
 
 `m - modules, v - version, c - control, a - action`
 
@@ -42,6 +41,22 @@ route function<br>
 | | | | 4 | Pong |  |
 | | | | 5 | ReqActiveNodes |  |
 | | | | 6 | ResActiveNodes |  |
+
+Other modules can register other control codes within range. New version number will be introduced when network upgrade protocols. Any node can support multiple version as long as there are version, control, action registered message types and handlers are hook up to the kernel.
+
+## Log
+
+By editing config.xml p2p module would dump log message to console.
+
+```
+<p2p>
+    <ip>127.0.0.1</ip>
+    <port>30304</port>
+    <discover>false</discover>
+    <show-status>true</show-status>
+    <show-log>true</show-log>
+</p2p>
+```
 
 ## Development
 
