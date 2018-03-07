@@ -3,8 +3,6 @@
 ```
 Usage: 
    ./aion.sh -r [block_number]
-or
-   ./aion.sh --revert [block_number]
 ```
 
 ### When to revert to a previous block?
