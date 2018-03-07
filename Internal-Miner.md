@@ -13,7 +13,7 @@ An example configuration enabling internal mining is shown below:
 ```
 In order to ensure the kernel is mining the following fields must be configured:
 * **mining**: _true_ to enable mining, _false_ to disable it
-* **miner-address**: The wallet address that will collect AION for mining blocks. To create a new wallet, run `./aion.sh -a create`. To import an existing wallet, please refer to [Importing Accounts](https://github.com/aionnetwork/aion/wiki/Importing-Accounts)
+* **miner-address**: The wallet address that will collect AION for mining blocks. To create a new wallet, run `./aion.sh -a create`. To import an existing wallet, please refer to [Importing Accounts](https://github.com/aionnetwork/aion/wiki/Importing-Accounts).
 * **cpu-mine-threads**: 1 OR up to 75% of your max CPU logical cores
 
     The number of logical cores may be seen in either task manager (Windows) or system monitor (Ubuntu). It is not recommended to go above 75% of the total logical cores.
