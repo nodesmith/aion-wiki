@@ -1,9 +1,8 @@
-<br>
 
-## Introduction
+### Introduction
 Aion network p2p protocols define set of messages which provide foundation rules of peer to peer communication fit for aion network and development progresses. 
 
-## <b>Header</b> <sup>[src](https://github.com/aionnetwork/aion/blob/dev/modP2p/src/org/aion/p2p/Header.java)</sup>
+### <b>Header</b> <sup>[src](https://github.com/aionnetwork/aion/blob/dev/modP2p/src/org/aion/p2p/Header.java)</sup>
 Header specific how to encode / decode message. For each protocol there would be pair of message and handler to be constructed by same header instance which indicates same version, control and action.    
 * length - byte[8]
 * includes
@@ -20,22 +19,21 @@ Header specific how to encode / decode message. For each protocol there would be
 ---------------------------------------------------------------------------------
 ```
 
-## Message <sup>[src](https://github.com/aionnetwork/aion/blob/dev/modP2p/src/org/aion/p2p/Msg.java)</sup>
+### Message <sup>[src](https://github.com/aionnetwork/aion/blob/dev/modP2p/src/org/aion/p2p/Msg.java)</sup>
 Message exchanged by peers contains 2 part, header and body. 
 * header byte[8]
 * body byte[]
 
-## Route Table
-route function<br>
-` return (ver << 16) | (ctrl << 8) | action; `
+### Route Table
+route function `return (ver << 16) | (ctrl << 8) | action;`
 
-`m - module, v - version, c - control, a - action`
+m - module, v - version, c - control, a - action
 
 | m | v | c | a | message | attributes | description | 
 | --- | --- | --- | --- | --- | --- | --- |
 | p2p | 0 | 0 | 0 | `DISCONNECT` |  | disconnect |
 |     | 0 | 0 | 1 | `REQ_HANDSHAKE` | `nodeId` byte[36]<br>`version` byte[4]<br>`ip` byte[8]<br>`port` byte[4]<br>`revisionLen` byte<br>`revision` byte[] | request handshake<int>version - self supported version |
-|     | 0 | 0 | 2 | `RES_HANDSHAKE` |  | response handshake |
+|     | 0 | 0 | 2 | `RES_HANDSHAKE` | byte  | response handshake<br>`0x01` true<br>`0x00` false |
 |     | 0 | 0 | 3 | `PING` | | ping |
 |     | 0 | 0 | 4 | `PONG` | | pong |
 |     | 0 | 0 | 5 | `REQ_ACTIVE_NODES` | | request active nodes |
@@ -49,11 +47,11 @@ route function<br>
 |      | 0 | 1 | 5 | `RES_BLOCKS_BODIES` | `List<byte[]>` (rlp) | response blocks bodies |
 |      | 0 | 1 | 6 | `BROADCAST_TX` | `List<ITransaction>` (rlp) [src](https://github.com/aionnetwork/aion/blob/dev/modAion/src/org/aion/zero/types/AionTransaction.java) | broadcast new transactions |
 |      | 0 | 1 | 6 | `BROADCAST_NEWBLOCK` | `IBlock` (rlp) [src](https://github.com/aionnetwork/aion/blob/dev/modAionImpl/src/org/aion/zero/impl/types/AionBlock.java) | broadcast new block |
-|      | 0 | 1 | 6 | `UNKNOWN` | | drop message | 
+|      | 0 | 1 | 127 | `UNKNOWN` | | drop message | 
 
 !! Except table cells with label '(rlp)', messages are encoded / decoded as from top to bottom in each attributes cells on table above. 
 
-## Handshake Process
+### Handshake Flow
 
 | |node-a | node-b |
 | --- | --- | --- |
@@ -61,7 +59,7 @@ route function<br>
 |  1  | create record on outbound collection | create connection on inbound collection |
 |  2  | fire request handshake to node-b | receive request handshake<br>if handshake rule passed send node-a response handshake<br>else no response till node-a get timeout from inbound collection |
 
-## Connections and Timeout
+### Connections and Timeout
 
 * p2p groups 3 collections of connections: inbound, outbound, active.
   * Inbound collection stores incoming connection before handshake process
