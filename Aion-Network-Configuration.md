@@ -28,7 +28,7 @@ Your kernel will have access to the seed nodes by default. Do not remove these n
 </net>
 ```
     
-**Note:** To allow peers to connect to you, you must also change your configuration IP from **127.0.0.1** to a public IP on your machine. If you are unsure about having a public IP, set it to **0.0.0.0**.
+**Note:** Make sure to keep your configuration IP at **127.0.0.1** to connect locally. To allow peers to connect to you, set it to **0.0.0.0**.
 
 To get a permanent peer id create a new configuration: 
 
