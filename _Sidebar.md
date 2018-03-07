@@ -25,3 +25,4 @@
 - [Aion Interchain](https://github.com/aionnetwork/aion_interchain)
 - [Aion Java API](https://github.com/aionnetwork/aion_api)
 - [Aion Compatible Web3](https://github.com/aionnetwork/aion_web3)
+- [Aion P2p Specifications](https://github.com/aionnetwork/aion/wiki/Aion-P2p-Specifications)
