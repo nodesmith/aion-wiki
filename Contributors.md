@@ -3,6 +3,7 @@ The Aion network project leverages useful source code from other open source pro
 **EthereumJ community:**
 * [Roman Mandeleil](https://github.com/romanman)
 * [Anton Nashatyrev](https://github.com/Nashatyrev)
+* [Nick Savers](https://github.com/nicksavers)
 
 **Equihash solver:**
 * [John Tromp](https://github.com/tromp)
