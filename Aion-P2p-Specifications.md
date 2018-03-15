@@ -2,6 +2,9 @@
 ### Introduction
 Aion network p2p protocols define set of messages which provide foundation rules of peer to peer communication fit for aion network and development progresses. 
 
+### <b>Node</b> <sup>[example](https://github.com/aionnetwork/aion/wiki/Aion-Seed-nodes)</sup>
+* endpoint: p2p://{uuid}@{ip}:{port}
+
 ### <b>Header</b> <sup>[src](https://github.com/aionnetwork/aion/blob/dev/modP2p/src/org/aion/p2p/Header.java)</sup>
 Header specific how to encode / decode message. For each protocol there would be pair of message and handler to be constructed by same header instance which indicates same version, control and action.    
 * length - byte[8]
