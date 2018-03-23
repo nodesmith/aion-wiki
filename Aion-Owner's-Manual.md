@@ -12,7 +12,7 @@ Aion is a multi-tier blockchain network that will enable any private or public-s
 
 * Spoke: Allow the creation of customized public or private blockchains that maintain interoperability with other blockchains, but allow publishers to choose governance, consensus mechanisms, issuance, and participation.
 
-## AION-1
+## AION PoW Release
 
 The Aion-1 blockchain is the genesis implementation of the connecting network. It is designed to be a fair, distributed, open blockchain architecture that is capable of fulfilling the requirements specified in the multi-tier blockchain network architecture. As an open blockchain, Aion-1 was designed with the following goals:
 
@@ -489,7 +489,7 @@ Refer to the previous section of error handling for details.
 
 * Is the Aion Token worth anything?
 
-During the testnet phase, the Aion tokens are not worth anything. However, once the open mainnet is launched, the Aion tokens being mined will have actual market value. If there are no issues with that network, those tokens will be part of the Aion netowrk.
+The Beta Testnet tokens are not worth anything. 
 
 * Is there a bounty/reward program?
 
