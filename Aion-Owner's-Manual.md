@@ -14,7 +14,7 @@ Aion is a multi-tier blockchain network that will enable any private or public-s
 
 ## AION PoW Release
 
-The Aion-1 blockchain is the genesis implementation of the connecting network. It is designed to be a fair, distributed, open blockchain architecture that is capable of fulfilling the requirements specified in the multi-tier blockchain network architecture. As an open blockchain, Aion-1 was designed with the following goals:
+The Aion blockchain is the genesis implementation of the connecting network. It is designed to be a fair, distributed, open blockchain architecture that is capable of fulfilling the requirements specified in the multi-tier blockchain network architecture. As an open blockchain, Aion was designed with the following goals:
 
 * Connecting blockchains and external services (e.g., oracles and databases) together through the contiguous network and providing accountable communication maintained through a decentralized network.
 
@@ -22,7 +22,7 @@ The Aion-1 blockchain is the genesis implementation of the connecting network. I
 
 * Creating a maintainable network through a robust and sustainable economic model.
 
-Users will be able to deploy adjacent participating networks suitable for their own use cases and communicate with other networks through an accountable routing architecture. Users ranging from large enterprises hosting consortium networks to community-oriented open networks are all welcome to participate. In the future, decentralized applications could sit on top of the connecting network with logic driven by integrating data from a multitude of blockchain networks. In addition, the Aion-1 blockchain is equipped with a full-functioning economic system intended to drive the continued maintenance and integrity of the network.
+Users will be able to deploy adjacent participating networks suitable for their own use cases and communicate with other networks through an accountable routing architecture. Users ranging from large enterprises hosting consortium networks to community-oriented open networks are all welcome to participate. In the future, decentralized applications could sit on top of the connecting network with logic driven by integrating data from a multitude of blockchain networks. In addition, the Aion blockchain is equipped with a full-functioning economic system intended to drive the continued maintenance and integrity of the network.
 
 ## Using the Owner’s Manual
 
