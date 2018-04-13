@@ -30,6 +30,7 @@ When setting the path for the database please make sure that:
 The current vendor options are:
 * **leveldb**
 * **h2**
+* **rocksdb**
 
 If you are changing vendors, you must either:
 * delete/move the previous database folder 
@@ -37,24 +38,21 @@ If you are changing vendors, you must either:
 or
 * changes the path of the database to a new valid location. 
 
-### Additional configuration options in ***aion-v0.1.9*** and later versions
-
-Starting with version ***0.1.9*** you can edit the kernel configuration file to customize each of the following options:
+### Additional configuration options
 ```xml
 <db>
     <path>database</path>
     <vendor>leveldb</vendor>
-    <enable_heap_cache>true</enable_heap_cache>
-    <enable_auto_commit>false</enable_auto_commit>
     <enable_db_cache>false</enable_db_cache>
     <enable_db_compression>false</enable_db_compression>
-    <max_heap_cache_size>0</max_heap_cache_size>
+    <cache_size>128mB</cache_size>
+    <block_size>16mB</block_size>
+    <max_fd_alloc_size>1024</max_fd_alloc_size>
+    <write_buffer_size>64mB</write_buffer_size>
+    <read_buffer_size>64mB</read_buffer_size>
 </db>
 ```
-3. The **enable_heap_cache** tag is used for telling the kernel to store data in a LRU in-memory cache for fast access when it is set to `true` or to not use the in-memory cache when it is set to `false`.
-4. The **enable_auto_commit** tag is for customizing the behavior for commiting data to the database inside the code. When set to `true` changes are committed to the database directly. When set to `false` data is committed only when an explicit commit call is made by the code. **Note** that when `enable_heap_cache = false` by default `enable_auto_commit = true` regardless of the setting in the config file, since without the LRU cache, changes would be lost if not saved to the database.
-5. The **enable_db_cache** and **enable_db_compression** tags customize the behaviour of the database to use or not use its internal caching and compression implementations.
-6. The **max_heap_cache_size** tag customizes the behaviour of the LRU cache when enabled. When `max_heap_cache_size = 0`, the setting is interpreted as unlimited (depending on the memory availability). Otherwise the given number determines the maximum number of entries kept in the LRU cache.
+The **enable_db_cache** and **enable_db_compression** tags customize the behavior of the database to use or not use its internal caching and compression implementations. The remaining tags customize different database options.
 
 ---
 ## Contents
