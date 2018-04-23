@@ -12,21 +12,23 @@ Aion is a multi-tier blockchain network that will enable any private or public-s
 
 * Spoke: Allow the creation of customized public or private blockchains that maintain interoperability with other blockchains, but allow publishers to choose governance, consensus mechanisms, issuance, and participation.
 
-## AION PoW Release
+## AION Kilimanjaro Release
 
-The Aion blockchain is the genesis implementation of the connecting network. It is designed to be a fair, distributed, open blockchain architecture that is capable of fulfilling the requirements specified in the multi-tier blockchain network architecture. As an open blockchain, Aion was designed with the following goals:
+The Aion Kilimanjaro blockchain is the genesis implementation of the interoperability blockchain. It is designed to be a fair, distributed, open blockchain architecture that is capable of fulfilling the requirements specified in the multi-tier blockchain network architecture. As an open blockchain, Aion Kilimanjaro was designed with the following core components: 
 
-* Connecting blockchains and external services (e.g., oracles and databases) together through the contiguous network and providing accountable communication maintained through a decentralized network.
+* Virtual Machine – FastVM with EVM Source Compatibility
 
-* Providing the necessary infrastructure to develop high-performance, decentralized, inter-blockchain applications.
+* Aion Proof of Work – Equihash210_9 
 
-* Creating a maintainable network through a robust and sustainable economic model.
+* Aion Core – Multi-chain Framework, Wire Protocol (P2P), Tx Pool, Event Manager
 
-Users will be able to deploy adjacent participating networks suitable for their own use cases and communicate with other networks through an accountable routing architecture. Users ranging from large enterprises hosting consortium networks to community-oriented open networks are all welcome to participate. In the future, decentralized applications could sit on top of the connecting network with logic driven by integrating data from a multitude of blockchain networks. In addition, the Aion blockchain is equipped with a full-functioning economic system intended to drive the continued maintenance and integrity of the network.
+* Aion APIs – Java API, Web3 API Compatibility
+
+* Aion Interchain – Token Bridge and Interchain Communication
 
 ## Using the Owner’s Manual
 
-This owner’s manual is intended as a walkthrough guide to help users install Aion and start using its various features. It is intended for non-developers who want to rapidly start participating in the Aion Network ecosystem. This can be in the form of running an Aion node, mining, creating a local wallet, transacting Aion and more. Once you are ready, you can go to Getting Started to download the binary. You can also visit the tutorials within the docs for specific examples on the user functionalities. For further information, please read through the FAQs section to find common issues, concerns and general questions. We want the information in this manual to be accessible in a single place, streamlining the experience of first-time users of Aion.
+This owner’s manual is intended as a walkthrough guide to help users install Aion and start using its various features. It is intended for non-developers who want to rapidly start participating in the Aion Network ecosystem. This can be in the form of running an Aion node, mining, creating a local wallet, transacting Aion and more. Once you are ready, you can go to [Getting Started](#GettingStarted) to download the binary. You can also visit the tutorials within the docs for specific examples on the user functionalities. For further information, please read through the FAQs section to find common issues, concerns and general questions. We want the information in this manual to be accessible in a single place, streamlining the experience of first-time users of Aion.
 
 Please visit the Error Handling section in the Appendix to reach the Aion team for any additional questions/concerns.
 
