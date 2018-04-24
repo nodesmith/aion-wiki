@@ -14,6 +14,7 @@ Usage: ./aion.sh [options] [arguments]
 
   -i                           show information
 
+  -r                           remove blocks on side chains and correct block info
   -r [block_number]            revert db up to specific block number
 
   -v                           show version
