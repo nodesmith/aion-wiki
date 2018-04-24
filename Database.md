@@ -1,4 +1,4 @@
-### Configuration
+## Configuration
 
 The database configuration can be set from the **config** folder by editing the **config.xml** file.
 
@@ -41,16 +41,17 @@ If you are changing vendors, you must either:
 or
 * changes the path of the database to a new valid location. 
 ---
-3. The **enable_db_compression** tag customize the behavior of the database to use or not to use its internal compression implementation. Enabling compression will reduce the storage space required, but may increase execution times for the different operations reading and writing to the database.
+3. The **enable_db_compression** tag customizes the behavior of the database to use or not to use its internal compression implementation. Enabling compression will reduce the storage space required, but may increase execution times for the different operations reading and writing to the database.
 
 ---
-### Contents
+## Contents
 
 The Aion blockchain data is stored in several folders each representing a key-value database:
 - `block` and `index` store the information about mined blocks
 - `details` and `storage` keep information on contract details and data storage
 - `state` is used for the state trie
 - `transaction` keeps the data related to transactions
+- `pendingtxCache` and `pendingtxPool` store permanent copies of pending transactions that the node received
 
 When the program is started it will print out its topmost known block number. In the case of an empty database, this will be the genesis block with a message like:
 
