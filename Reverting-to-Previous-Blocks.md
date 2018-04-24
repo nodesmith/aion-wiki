@@ -7,7 +7,7 @@ Usage:
 
 ### When to revert to a previous block?
 
-#### Case 1: Failed database recovery
+#### Failed database recovery
 In case of data corruption, the kernel makes a few attempts at recovering the corrupted data.
 When in recovery mode, it will display messages informing the user of the recovery status, as follows:
 ```
@@ -19,6 +19,7 @@ INFO  CONS [main]: Rebuilding block #1003.
 ```
 If these recovery attempts fail, you can stop the kernel and attempt reverting to the block that the rebuild started from, in the example above block 1000. The reason the recovery was started from this block is that the database was able to find a correct world state for that block, i.e. uncorrupted data.
 
+<!--
 #### Case 2: Stuck on sidechain
 
 If your Aion kernel is running, but not sync-ing to the latest block from the network, there's a high likelihood that you are stuck on a side chain. You can verify this by enabling the DEBUG messages for SYNC in your `config.xml` file (to use the new configuration you need to restart the kernel after updating the config file).
@@ -39,3 +40,4 @@ In such cases, the common block between the two chains may be outside of the sco
 ./aion -r 4881
 ```
 Restart the kernel to see if the new scope allows you to sync to the main chain. If not repeat the process by reverting to the new lowest block number without a parent block.
+-->
