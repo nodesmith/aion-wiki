@@ -1,5 +1,10 @@
 ## Decimal Places
 
+To keep a simple and easy to use nomenclature, two terms are used **AION** and **Amp**. The standard unit prefixes are used in front of the terms to display the decimal place. 
+
+10<sup>-9</sup> will be frequently used as it is the decimal unit of measurement for the cost of NRG (as GWEI is for ETH), as such **Amp is introduced as the unit**. (Ex: NRG price: 10 Amp)
+<br/><br/>
+
 | Power of 10        | Unit                    |
 | ------------------ | ----------------------- |
 | 10<sup>0</sup> = 1 | AION                                |
@@ -22,4 +27,3 @@
 | 10<sup>-17</sup>    |                                    |
 | 10<sup>-18</sup>    | nAmp (nano-Amp) (or atto-AION)     |
 
-To keep a simple and easy to use nomenclature, two terms are used AION and Amp. The standard unit prefixes are used in front of the terms to display the decimal place. 10<sup>-9</sup> will be frequently used as it is the decimal unit of measurement for the cost of NRG (as GWEI is for ETH), as such Amp is introduced as the unit. (Ex: NRG price: 10 Amp)
