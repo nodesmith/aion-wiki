@@ -28,15 +28,15 @@ The Aion Kilimanjaro blockchain is the genesis implementation of the interoperab
 
 ## Using the Owner’s Manual
 
-This owner’s manual is intended as a walkthrough guide to help users install Aion and start using its various features. It is intended for non-developers who want to rapidly start participating in the Aion Network ecosystem. This can be in the form of running an Aion node, mining, creating a local wallet, transacting Aion and more. Once you are ready, you can go to [Getting Started](#GettingStarted) to download the binary. You can also visit the tutorials within the docs for specific examples on the user functionalities. For further information, please read through the FAQs section to find common issues, concerns and general questions. We want the information in this manual to be accessible in a single place, streamlining the experience of first-time users of Aion.
+This owner’s manual is intended as a walkthrough guide to help users install Aion and start using its various features. It is intended for non-developers who want to rapidly start participating in the Aion Network ecosystem. This can be in the form of running an Aion node, mining, creating a local wallet, transacting Aion and more. Once you are ready, you can go to [Getting Started](#getting-started) to download the binary. You can also visit the tutorials within the docs for specific examples on the user functionalities. For further information, please read through the [FAQs](#faqs) section to find common issues, concerns and general questions. We want the information in this manual to be accessible in a single place, streamlining the experience of first-time users of Aion.
 
-Please visit the Error Handling section in the Appendix to reach the Aion team for any additional questions/concerns.
+Please visit the [Error Handling](#error-handling) section in the Appendix to reach the Aion team for any additional questions/concerns.
 
 ## Links
 
-For more information on Aion, the architecture, and a deeper dive into the components, please check out the Aion Technical Introduction here.
+For more information on Aion, the architecture, and a deeper dive into the components, please check out the Aion Technical Introduction [here](https://aion.network/media/en-aion-network-technical-introduction.pdf).
 
-To access Aion’s source code and begin contributing to this open-source project, please visit the Aion Github Wiki here.
+To access Aion’s source code and begin contributing to this open-source project, please visit the Aion Github Wiki [here](https://github.com/aionnetwork).
 
 # Getting Started
 
@@ -54,7 +54,7 @@ Below are the requirements for setting up and running the kernel.
 
 _**Getting the kernel**_
 
-The latest version of Aion kernel will be constantly released during the Public Testnet phase. You can acquire access to the most recent Aion binary file here.
+The latest version of Aion kernel will be constantly released during the Public Testnet phase. You can acquire access to the most recent Aion binary file [here](https://github.com/aionnetwork/aion/releases).
 
 Once you have the binary file, you will need to unarchive the contents in your chosen destination using one of the following methods:
 
@@ -72,7 +72,9 @@ A folder named aion will be created in the chosen directory.
 
 _**Creating accounts**_
 
-Account addresses are required for mining and sending transactions. An address is a 64-character (32 byte) hex string, which contains the public key of an account. You can create accounts on the kernel by following these steps:
+> **Note** _(only keystore file is supported)_
+
+Account addresses are required for mining and sending transactions. An address is a hashed representation of the users publicKey, prefixed with an identifier "0xA0".. You can create accounts on the kernel by following these steps:
 
 1. Go to aion directory
 
@@ -92,37 +94,7 @@ After account creation, an associated keystore file is generated and placed in t
 
 _**Generating peer Id (optional)**_
 
-> **Note** Aion kernel versions below 0.1.9 require a node Id to be placed in the configuration file. For version 0.1.9 and higher, this step is optional since a temporary unique Id will be assigned to the node at runtime.
-
-> A permanent node Id can be used by peers to connect to each other. Instructions for generating and assigning a node Id are as follows: 1. Download the Id generation script generateId.sh from here.
-
-2. Open a terminal and add executable permissions to the script using the following command.
-
-```
-chmod +x generateId.sh
-```
-
-3. Run the script using the following command.
-
-```
-./generateId.sh
-```
-
-4. Copy the output.
-
-5. Navigate to the config.xml file in the aion directory (aion/config/config.xml):
-
-6. Open the config.xml using a text editor or run the following command in terminal:
-
-```
-gedit config.xml
-```
-
-7. Update the value between the id tags to the copied Id.
-
-```
-<id>my-new-id-value-is-set-here-12345678</id>
-```
+The default config will auto assign an ID on the first boot, and will continue to use that ID afterwards. If you want to generate a custom ID, you can manually enter a valid UUID into the config file. NodeID can be changed any point. 
 
 _**Setting up seed nodes (optional)**_
 
@@ -139,6 +111,7 @@ To allow connection among peers the ip section of the config file should be upda
 ```
 <p2p> <ip>0.0.0.0</ip> <port>30303</port> </p2p>
 ```
+> **Note** UPnP is disabled by default; therefore, you will be able to connect to the network without being discoverable. If you want to be discoverable to the network, activate the port forwarding and enable UPnP to allow nodes to receive inbound connections, which can also help with network connectivity.
 
 _**Launch kernel**_
 
@@ -170,7 +143,7 @@ The internal miner runs on the local node and is provided with the kernel. It ca
 
 * Mining: should be set to true to enable mining
 
-* Miner-address: the wallet address that will collect AION for mining blocks. The account address created in creating accounts section can be used for this purpose.
+* Miner-address: the wallet address that will collect AION for mining blocks. The account address created in [Creating Accounts](#creating-accounts) section can be used for this purpose.
 
 * Cpu-mine-threads: number of logical CPU cores to use for mining. This number should be between 1 and 75% of your maximum CPU logical cores. The number of logical cores
 
@@ -188,7 +161,7 @@ A sample config file following internal mining configuration is shown below. Onc
 
 CPU and GPU-CUDA miners are provided as options for external mining. These miners are designed to be used in conjunction with the provided reference mining pool. Future miner versions will be adapted to join public pools. The provided reference pool requires more advanced Ubuntu configuration; if you are not comfortable with the Ubuntu terminal we recommend using the internal kernel miner.
 
-Follow these steps to run the external miner: 1. Download a pre-built miner binary from the aion_miner release page.
+Follow these steps to run the external miner: 1. Download a pre-built miner binary from the aion_miner [release page](https://github.com/aionnetwork/aion_miner/releases).
 
 2. Once you have the binary file, open a terminal and run the following command:
 
@@ -203,7 +176,7 @@ tar xvjf aionminer-{type}-{version}.bz2
 Following the instructions runs AION CPU miner with 4 threads connecting to a mining pool running locally, listening on port 3333 for incoming connections.
 
 ```
-./aionminer-cpu -t 4 -l 127.0.0.1:3333
+./aionminer-cpu -t 4 -l 127.0.0.1:3333 -u 0xa0…
 ```
 
 Here is an example of running a benchmark on your CPU using a single thread:
@@ -217,7 +190,7 @@ Here is an example of running a benchmark on your CPU using a single thread:
 Following the instructions runs AION CUDA miner with 64 blocks and 64 threads per block on device 0 using solver version 1 (CUDA Tromp).
 
 ```
-./aionminer -cd 0 -cv 1 -cb 64 -ct 64
+./aionminer -cd 0 -cv 1 -cb 64 -ct 64 -u 0xa0…
 ```
 
 Here is an example of running a benchmark on your GPU (GPU 0, CUDA-Tromp solver):
@@ -241,20 +214,22 @@ Here is an example of running a benchmark on your GPU (GPU 0, CUDA-Tromp solver)
 **Extra parameters for CUDA miner:**
 
 ```
--ci CUDA info -cv CUDA solver (0 = djeZo, 1 = tromp, default=1)
+--ci Show CUDA info 
 
--cd Enable mining on spec. devices
+--cv CUDA solver (0 = djeZo, 1 = tromp, default=1)
 
--cb Number of blocks (per device)
+--cd Enable mining on spec. devices
 
--ct Number of threads per block (per device)
+--cb Number of blocks (per device)
+
+--ct Number of threads per block (per device)
 ```
 
 ### MINING POOL
 
-The Aion mining pool should be used in conjunction with the Aion mining client on the Aion testnet.
+The Aion mining pool should be used in conjunction with the Aion mining client on the Aion network. During the initial Kilimanjaro launch, only the Aion solo miner is currently officially supported on the network. Users can join public pools at their own risk. The Aion Foundation may release an official mining pool at a later date. 
 
-> **Note** This is an Aion mining pool designed to be used in conjunction with the Aion mining client on the Aion testnet. This mining pool has been specifically designed to be used only for solo mining on the Aion test network; it is not suitable to be used as a public mining pool and should not be deployed in that configuration.
+The primary difference in the solo pool is that it cannot distribute the reward. All rewards will be added to the account specified in the Kernel configuration file. 
 
 **Prerequisites**
 
@@ -286,7 +261,7 @@ Follow these steps to run the mining pool:
 
 a. **Mining:** should be set to false to disable internal mining
 
-b. **Miner-address:** the address which will receive mined block rewards. The address is a 64 character (32 byte) hex string containing the public key and address of an account.
+b. **Miner-address:** the address which will receive mined block rewards. The address is a 64 character (32 byte) hex string containing the public key and address of an account. This account will start with a0. 
 
 **E.g.**
 
@@ -295,7 +270,7 @@ b. **Miner-address:** the address which will receive mined block rewards. The ad
 
 <mining>false</mining>
 
-<miner-address>1234123412341234123412341234123412341234123412341234123412341234</miner-address>
+<miner-address>A012341234123412341234123412341234123412341234123412341234123412</miner-address>
 
 <cpu-mine-threads>8</cpu-mine-threads>
 
@@ -304,32 +279,39 @@ b. **Miner-address:** the address which will receive mined block rewards. The ad
 </consensus>
 ```
 
-3. Download the latest prepackaged aion_solo_pool from its release page.
+3. Ensure that the APIs enabled section includes the “stratum” option
 
-4. Navigate to the download directory, open a terminal and run the following command to unpack the file:
+**E.g.**
+
+```
+<apis-enabled>web3,eth,personal,stratum</apis-enabled>
+```
+4. Download the latest prepackaged aion_solo_pool from its release page
+
+5. Navigate to the download directory, open a terminal and run the following command to unpack the file:
 
 ```
 tar xf aion-solo-pool-<VERSION>.tar.gz
 ```
 
-5. Run the configure script to download and build all of the pool dependencies and place them into the current directory. This script may take several minutes to complete, however it must only be run once. Configure script can be run using:
+6. Run the configure script to download and build all of the pool dependencies and place them into the current directory. This script may take several minutes to complete, however it must only be run once. Configure script can be run using:
 
 ```
 ./configure.sh
 ```
-6. Run the solo_pool using the quickstart run script. This script will start and stop both the pool and redis server.
+7. Run the solo_pool using the quickstart run script, this script will start and stop both the pool and redis server.
 
 ```
 ./run_quickstart.sh
 ```
 
-7. Open another terminal in aion directory and start the kernel:
+8. Open another terminal in aion directory and start the kernel:
 
 ```
 ./aion.sh
 ```
 
-8. The pool is now ready to accept incoming client connections and to distribute work to clients.
+9. The pool is now ready to accept incoming client connections and to distribute work to clients
 
 # Using Aion
 
@@ -347,7 +329,7 @@ Following are the prerequisites for building aion web3 API. You can download and
 
 **Installation**
 
-Web3 console can be downloaded by visiting its repository on GitHub. You can download a zip file containing the repository by pressing the “Clone or download” button and extracting the zip file contents into your desired directory. Alternatively, the repository can be cloned through the terminal using:
+Web3 console can be downloaded by visiting its [repository](https://github.com/aionnetwork/aion_web3) on GitHub. You can download a zip file containing the repository by pressing the “Clone or download” button and extracting the zip file contents into your desired directory. Alternatively, the repository can be cloned through the terminal using:
 
 ```
 git clone https://github.com/aionnetwork/aion_web3
@@ -405,7 +387,7 @@ You can view the accounts that are created and stored locally using the followin
 eth.accounts
 ```
 
-Any of the accounts shown can be used to perform mentioned commands below. Refer to the configuration section of kernel for more information regarding creating accounts.
+Any of the accounts shown can be used to perform mentioned commands below. Refer to the configuration section of [Kernel](#kernel) for more information regarding creating accounts.
 
 ### CHECK YOUR BALANCE
 
@@ -418,7 +400,7 @@ eth.getBalance('{0xacc}')
 **E.g.**
 
 ```
-eth.getBalance(‘0x1234123412341234123412341234123412341234123412341234123412341234’)
+eth.getBalance(‘0xa012341234123412341234123412341234123412341234123412341234123412’)
 ```
 
 ### UNLOCK YOUR ACCOUNT
@@ -432,14 +414,16 @@ personal.unlockAccount('{0xacc}', '{pw}', {secondsToUnlock})
 **E.g.**
 
 ```
-personal.unlockAccount(‘0x1234123412341234123412341234123412341234123412341234123412341234’, ‘abc’, 60000)
+personal.unlockAccount(‘0xa012341234123412341234123412341234123412341234123412341234123412’, ‘abc’, 60000)
 ```
 
 If unlocking is successful, the output will be true; otherwise false.
 
+> **Note** The user should only attempt this command with their **local** node that they manage/own themselves. 
+
 ### TRANSFER AION
 
-You can send a transaction from one account to another with a specified value. It is important to note that the account of sender should be unlocked before making the transfer. Replace {0xacc_from}, {0xacc_to}, {amount_to_transfer} with the sender’s unlocked account address, recipient’s account address, and amount to transfer.
+You can send a transaction from one account to another with a specified value. It is important to note that the account of sender should be [unlocked](#unlock-your-account) before making the transfer. Replace {0xacc_from}, {0xacc_to}, {amount_to_transfer} with the sender’s unlocked account address, recipient’s account address, and amount to transfer.
 
 ```
 eth.sendTransaction({from: '{0xacc_from}', to: '{0xacc_to}', value: {amount_to_transfer}})
@@ -448,12 +432,12 @@ eth.sendTransaction({from: '{0xacc_from}', to: '{0xacc_to}', value: {amount_to_t
 **E.g.**
 
 ```
-eth.sendTransaction({from:’0x1234123412341234123412341234123412341234123412341234123412341234’, to: ‘0xabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd’, value: 10000)
+eth.sendTransaction({from:’0xa012341234123412341234123412341234123412341234123412341234123412’, to: ‘0xabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd’, value: 10000)
 ```
 
 ### CREATE WALLET BACKUP OR IMPORT ACCOUNT
 
-We recommend you keep track of your keystore files and copy them over to the new binary to successfully import/export accounts. Fore more details, refer to “create wallet backup” under “Configuration” of the “Setting up your Aion node” section.
+We recommend you keep track of your keystore files and copy them over to the new binary to successfully import/export accounts.
 
 # Appendix
 
@@ -461,25 +445,27 @@ We recommend you keep track of your keystore files and copy them over to the new
 
 To report any issues after running and using the Aion Kernel, please find the following resources:
 
-* Github (https://github.com/aionnetwork): you can log tickets and report bugs/issues on the AionNetwork Github page.
+* [GitHub](https://github.com/aionnetwork): you can log tickets and report bugs/issues on the AionNetwork Github page.
 
-* Forum (https://forum.aion.network/): check out our forum to chat with the Aion community and moderators to stay up to date with latest updates, issues, resolutions and discussions.
+* [Forum](https://forum.aion.network/): check out our forum to chat with the Aion community and moderators to stay up to date with latest updates, issues, resolutions and discussions.
 
-* Email us at support@aion.network for any specific questions
+* Email us at [support@aion.network](support@aion.network) for any specific questions
 
 ## FAQs
 
 **General**
 
-* Where do I start? Go to our releases page to download the latest binary and then go to the Getting Started section to set up your Aion node.
+* Where do I start? 
+
+Go to our [releases](https://github.com/aionnetwork/aion/releases) page to download the latest binary and then go to the [Getting Started](#getting-started) section to set up your Aion node.
 
 * How can I help?
 
-You can directly contribute to Aion during our testnet phase by running a node during our testnet phase. We encourage all users to actively participate in the various error handling channels we have available to help us fix any issues. Additionally, there will be many other areas community members can contribute to the project in the near future; from content translations, posting feature reviews/requests, reinforcing community engagement, to ‘retweets’, writing blog posts, and industry analysis.
+You can directly contribute to Aion by becoming a core contributor, system tester, dApp developer, tools developer, or even a researcher. We encourage all users to actively participate in the various error handling channels we have available to help us fix any issues. Additionally, there will be many other areas community members can contribute to the project in the near future; from content translations, posting feature reviews/requests, reinforcing community engagement, to ‘retweets’, writing blog posts, and industry analysis.
 
 * How do I find the latest version and how often does it get updated?
 
-Each week, the latest version of the binary will be sent out via the support email to the signed-up users.
+The latest version of the binary will be available at Aion's [releases](https://github.com/aionnetwork/aion/releases) page.
 
 * Can I run this on a virtual machine, raspberry pi, vagrant box?
 
@@ -487,35 +473,31 @@ Yes, but they are not supported. If you follow the instructions of setting it up
 
 * Where do I report errors?
 
-Refer to the previous section of error handling for details.
-
-* Is the Aion Token worth anything?
-
-The Beta Testnet tokens are not worth anything. 
+Refer to the previous section [Error Handling](#error-handling) for details.
 
 * Is there a bounty/reward program?
 
-Yes, there will be a reward program to incentivize early miners and users of Aion to actively participate in the early stages of the mainnet launch. More details on the bounty structure will be released shortly.
+Yes, there will be a reward program to incentivize early miners and users of Aion to actively participate in the early stages of the Kilimanjaro launch. More details on the bounty structure will be released shortly. 
 
 **Installation**
 
 * How do I install Aion and web3 interface?
 
-Please refer to the “Installation” section under “Setting up your Aion node” for the detailed steps.
+Please refer to the [Installation](#installation) section for the detailed steps.
 
-* How do I monitor the Testnet installation?
+* How do I monitor the Kernel installation?
 
 No installation, it is a compiled binary therefore it is just executed.
 
 * What are the system requirements to install and run the Kernel?
 
-You will need Ubuntu 16.04 or a later version. Please refer to the “Setting up your Aion node” section for more details.
+You will need Ubuntu 16.04 or a later version. Please refer to the [Getting Started](#getting-started) section for more details.
 
 **Mining**
 
 * How do I know that I’m mining?
 
-If you are running a node on version 0.1.11, you will see a CPU output with “x” number of solutions produced per second.
+You will see a CPU output with “x” number of solutions produced per second. 
 
 * How many CPU threads should I allocate for my mining node?
 
@@ -545,8 +527,4 @@ In the config file you can change log of SYNC to Debug and can find out the best
 
 * I am getting an error that I’m not synced, what should I do to get synced again?
 
-Restart the node (Ctrl+C to stop, ./aion.sh to start) OR you may need to delete the database folder if the database is corrupted/you are on a side chain.
-
-* What does this error “ERROR SYNC [pool-3-thread-6]: <res-headers decode-msg msg-bytes=1216490 from-node=-39373317 >” mean?
-
-This means your node has stopped syncing and has created an “uncle” on your local node. Please see the question above to get synced again.
+Restart the node (Ctrl+C to stop, ./aion.sh to start), if the error persists, try to revert to previous blocks (click here for details). If your issue has still not been resolved, you may need to delete the database folder if the database is corrupted beyond the Aion Kernel’s repair capabilities.
