@@ -16,7 +16,7 @@ git clone --recursive https://github.com/aionnetwork/aion
 cd aion
 ```
 
-3. Check your environment settings are correct, including the Ant execute path, java execute PATH link to the JDK9 folder, and the JAVA_HOME. Then you should be able to build 
+3. Check your environment settings are correct, including the Ant execute path, java execute PATH link to the JDK10 folder, and the JAVA_HOME. Then you should be able to build 
 ```
 ant pack_build
 or 
