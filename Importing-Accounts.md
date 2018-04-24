@@ -12,13 +12,13 @@ cd aion-old
 ```
 As output, you will get the list of public keys for your accounts, for example:
 ```
-0xabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd
-0x1234123412341234123412341234123412341234123412341234123412341234
+0xa0abcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdab
+0xa012341234123412341234123412341234123412341234123412341234123412
 ```
 
 Next, you need to obtain the private key associated with each account you want to export, by executing the command:
 ```
-./aion.sh -a export 0xabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd
+./aion.sh -a export 0xa0abcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdab
 ```
 You will be prompted to input the password for that account, and then your private key will be displayed:
 ```
@@ -36,7 +36,7 @@ After introducing the correct password associated with the account twice, the ac
 ```
 Please enter a password: 
 Please re-enter your password: 
-The private key was imported, the address is: 0x29691e160131d172936896213a1ac37614d349e52c67d3313b165e12c8e41005
+The private key was imported, the address is: 0xa0abcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdab
 ```
 
 You can verify that the account exists in the new installation by running:
