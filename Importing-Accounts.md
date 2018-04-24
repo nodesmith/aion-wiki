@@ -45,5 +45,5 @@ You can verify that the account exists in the new installation by running:
 ```
 which should now display the imported account:
 ```
-0xabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd
+0xa0abcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdab
 ```
