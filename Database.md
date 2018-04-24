@@ -1,4 +1,4 @@
-## Configuration
+### Configuration
 
 The database configuration can be set from the **config** folder by editing the **config.xml** file.
 
@@ -7,11 +7,13 @@ If you do not have a configuration file, first open a terminal and execute:
 ./aion.sh -c
 ```
 Note that you may need to add the [seed nodes](https://github.com/aionnetwork/aion/wiki/Aion-Seed-nodes) to the file before starting the kernel.
+
 The current default database configuration is:
 ```xml
 <db>
     <path>database</path>
     <vendor>leveldb</vendor>
+    <enable_db_compression>false</enable_db_compression>
 </db>
 ```
 ---
@@ -38,25 +40,11 @@ If you are changing vendors, you must either:
 
 or
 * changes the path of the database to a new valid location. 
-
-### Additional configuration options
-```xml
-<db>
-    <path>database</path>
-    <vendor>leveldb</vendor>
-    <enable_db_cache>false</enable_db_cache>
-    <enable_db_compression>false</enable_db_compression>
-    <cache_size>128mB</cache_size>
-    <block_size>16mB</block_size>
-    <max_fd_alloc_size>1024</max_fd_alloc_size>
-    <write_buffer_size>64mB</write_buffer_size>
-    <read_buffer_size>64mB</read_buffer_size>
-</db>
-```
-The **enable_db_cache** and **enable_db_compression** tags customize the behavior of the database to use or not use its internal caching and compression implementations. The remaining tags customize different database options.
+---
+3. The **enable_db_compression** tag customize the behavior of the database to use or not to use its internal compression implementation. Enabling compression will reduce the storage space required, but may increase execution times for the different operations reading and writing to the database.
 
 ---
-## Contents
+### Contents
 
 The Aion blockchain data is stored in several folders each representing a key-value database:
 - `block` and `index` store the information about mined blocks
