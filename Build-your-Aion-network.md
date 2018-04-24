@@ -1,7 +1,7 @@
 ### Prerequisites
 
 * [Ubuntu 16.04 or later version](http://releases.ubuntu.com/16.04/)
-* [Oracle Java SE Development Kit 9](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* [Oracle Java SE Development Kit 10](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 * [Apache Ant 1.10](http://ant.apache.org/bindownload.cgi)
 
 ### How to build
@@ -16,7 +16,7 @@ git clone --recursive https://github.com/aionnetwork/aion
 cd aion
 ```
 
-3. Check your environment settings are correct, including the Ant execute path, java execute PATH link to the JDK9 folder,and the JAVA_HOME. Then you should be able to build 
+3. Check your environment settings are correct, including the Ant execute path, java execute PATH link to the JDK9 folder, and the JAVA_HOME. Then you should be able to build 
 ```
 ant pack_build
 or 
