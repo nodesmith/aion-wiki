@@ -1,4 +1,4 @@
-**Version 0.1.12** of the kernel offers the command line option to revert to a previous block. This functionality is meant for removing from the database all blocks greater than the one given as parameter. **The revert feature makes permanent changes to the database. If you are unsure about using it, back-up the database first.**
+**Version 0.1.12** and later versions of the kernel offer the command line option to revert to a previous block. This functionality is meant for removing from the database all blocks greater than the one given as parameter. **The revert feature makes permanent changes to the database. If you are unsure about using it, back-up the database first.**
 
 ```
 Usage: 
