@@ -41,7 +41,7 @@ If you are changing vendors, you must either:
 or
 * changes the path of the database to a new valid location. 
 ---
-3. The **enable_db_compression** tag customizes the behavior of the database to use or not to use its internal compression implementation. Enabling compression will reduce the storage space required, but may increase execution times for the different operations reading and writing to the database.
+3. The **enable_db_compression** tag customizes the behavior of the database to turn on or off its internal compression implementation. Enabling compression will reduce the storage space required, but may increase execution times for the different operations reading and writing to the database.
 
 ---
 ## Contents
