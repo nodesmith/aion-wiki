@@ -2,10 +2,11 @@
 
 The database configuration can be set from the **config** folder by editing the **config.xml** file.
 
-If you have not generated a default configuration yet, first open a terminal and execute:
+If you do not have a configuration file, first open a terminal and execute:
 ```bash
 ./aion.sh -c
 ```
+Note that you may need to add the [seed nodes](https://github.com/aionnetwork/aion/wiki/Aion-Seed-nodes) to the file before starting the kernel.
 The current default database configuration is:
 ```xml
 <db>
