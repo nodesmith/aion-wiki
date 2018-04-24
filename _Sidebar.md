@@ -7,8 +7,7 @@
 
 **Kernel Configuration**
 - [Build your Aion network](https://github.com/aionnetwork/aion/wiki/Build-your-Aion-network)
-- [Installation](https://github.com/aionnetwork/aion/wiki/Installation)
-- [Aion Network Configuration](https://github.com/aionnetwork/aion/wiki/Aion-Network-Configuration)
+- [Installation & Configuration](https://github.com/aionnetwork/aion/wiki/Installation)
 - [Command Line Interface](https://github.com/aionnetwork/aion/wiki/Command-Line-Interface)
 - [Database](https://github.com/aionnetwork/aion/wiki/Database) 
 - [Internal Miner](https://github.com/aionnetwork/aion/wiki/Internal-Miner)
