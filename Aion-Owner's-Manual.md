@@ -155,10 +155,10 @@ A sample config file following internal mining configuration is shown below. Onc
 
 ```
 <consensus>
-<mining>true</mining> 
-<miner-address>0000000000000000000000000000000000000000000000000000000000000111</miner-address> 
-<cpu-mine-threads>2</cpu-mine-threads> 
-<extra-data>MyAion</extra-data> 
+    <mining>true</mining> 
+    <miner-address>0000000000000000000000000000000000000000000000000000000000000111</miner-address> 
+    <cpu-mine-threads>2</cpu-mine-threads> 
+    <extra-data>MyAion</extra-data> 
 </consensus>
 ```
 
