@@ -74,7 +74,7 @@ _**Creating accounts**_
 
 > **Note** _(only keystore file is supported)_
 
-Account addresses are required for mining and sending transactions. An address is a hashed representation of the users publicKey, prefixed with an identifier "0xA0".. You can create accounts on the kernel by following these steps:
+Account addresses are required for mining and sending transactions. An address is a hashed representation of the users publicKey, prefixed with an identifier "0xa0".. You can create accounts on the kernel by following these steps:
 
 1. Go to aion directory
 
@@ -143,7 +143,7 @@ The internal miner runs on the local node and is provided with the kernel. It ca
 
 * Mining: should be set to true to enable mining
 
-* Miner-address: the wallet address that will collect AION for mining blocks. The account address created in [Creating Accounts](#creating-accounts) section can be used for this purpose.
+* Miner-address: the wallet address that will collect AION for mining blocks. The account address created in creating accounts section can be used for this purpose.
 
 * Cpu-mine-threads: number of logical CPU cores to use for mining. This number should be between 1 and 75% of your maximum CPU logical cores. The number of logical cores
 
@@ -154,7 +154,12 @@ may be seen in either task manager (Windows) or system monitor (Ubuntu). It is n
 A sample config file following internal mining configuration is shown below. Once the config file has been updated, the kernel should pick up the mining settings next time it is launched. Mining is normally delayed 10 seconds to allow sufficient time for the kernel to fully start.
 
 ```
-<consensus> <mining>true</mining> <miner-address>0000000000000000000000000000000000000000000000000000000000000111</miner-address> <cpu-mine-threads>2</cpu-mine-threads> <extra-data>MyAion</extra-data> </consensus>
+<consensus>
+<mining>true</mining> 
+<miner-address>0000000000000000000000000000000000000000000000000000000000000111</miner-address> 
+<cpu-mine-threads>2</cpu-mine-threads> 
+<extra-data>MyAion</extra-data> 
+</consensus>
 ```
 
 **External miner**
@@ -176,13 +181,12 @@ tar xvjf aionminer-{type}-{version}.bz2
 Following the instructions runs AION CPU miner with 4 threads connecting to a mining pool running locally, listening on port 3333 for incoming connections.
 
 ```
-./aionminer-cpu -t 4 -l 127.0.0.1:3333 -u 0xa0…
-```
+./aionminer -t 4 -l 127.0.0.1:3333 -u {0xacc}```
 
 Here is an example of running a benchmark on your CPU using a single thread:
 
 ```
-./aionminer-cpu -b -t 1
+./aionminer -b -t 1
 ```
 
 **GPU**
@@ -190,7 +194,7 @@ Here is an example of running a benchmark on your CPU using a single thread:
 Following the instructions runs AION CUDA miner with 64 blocks and 64 threads per block on device 0 using solver version 1 (CUDA Tromp).
 
 ```
-./aionminer -cd 0 -cv 1 -cb 64 -ct 64 -u 0xa0…
+./aionminer -cd 0 -cv 1 -cb 64 -ct 64 -u {0xacc}
 ```
 
 Here is an example of running a benchmark on your GPU (GPU 0, CUDA-Tromp solver):
@@ -202,7 +206,17 @@ Here is an example of running a benchmark on your GPU (GPU 0, CUDA-Tromp solver)
 **General miner parameters:**
 
 ```
--h [help] Print this help message and quits -l [location] Stratum server:port -u [username] Username (aion address) -a [port] Local API port (default: 0 = do not bind) -d [level] Debug print level (0 : print all, 5 : fatal only, default: 2) -b [ --benchmark ] [=arg(=200)] Run in benchmark mode (default: 200 iterations)
+-h [help] Print this help message and quits 
+
+-l [location] Stratum server:port 
+
+-u [username] Username (aion address) 
+
+-a [port] Local API port (default: 0 = do not bind) 
+
+-d [level] Debug print level (0 : print all, 5 : fatal only, default: 2) 
+
+-b [ --benchmark ] [=arg(=200)] Run in benchmark mode (default: 200 iterations)
 ```
 
 **Extra parameters for CPU miner:**
@@ -268,13 +282,13 @@ b. **Miner-address:** the address which will receive mined block rewards. The ad
 ```
 <consensus>
 
-<mining>false</mining>
+    <mining>false</mining>
 
-<miner-address>A012341234123412341234123412341234123412341234123412341234123412</miner-address>
+    <miner-address>A012341234123412341234123412341234123412341234123412341234123412</miner-address>
 
-<cpu-mine-threads>8</cpu-mine-threads>
+    <cpu-mine-threads>8</cpu-mine-threads>
 
-<extra-data>AION</extra-data>
+    <extra-data>AION</extra-data>
 
 </consensus>
 ```
@@ -286,7 +300,7 @@ b. **Miner-address:** the address which will receive mined block rewards. The ad
 ```
 <apis-enabled>web3,eth,personal,stratum</apis-enabled>
 ```
-4. Download the latest prepackaged aion_solo_pool from its release page
+4. Download the latest prepackaged aion_solo_pool from its [release page](https://github.com/aionnetwork/aion_miner/releases).
 
 5. Navigate to the download directory, open a terminal and run the following command to unpack the file:
 
@@ -319,7 +333,7 @@ After successfully setting up your Aion node, you can start using Aion using the
 
 **Prerequisites**
 
-Following are the prerequisites for building aion web3 API. You can download and install each item by following the provided link. 
+Following are the prerequisites for building aion Web3 API. You can download and install each item by following the provided link. 
 
 * node.js version 8.9.1 [download and install](https://nodejs.org/en/download/)
 
@@ -349,7 +363,7 @@ npm install --save aion-web3
 
 ## API Use
 
-You can include Aion’s web3 API in your application using one of these methods:
+You can include Aion’s Web3 API in your application using one of these methods:
 
 * Web use
 
@@ -384,7 +398,7 @@ You can now interact with Aion kernel using the console. Below are some sample o
 You can view the accounts that are created and stored locally using the following command.
 
 ```
-eth.accounts
+personal.listAccounts
 ```
 
 Any of the accounts shown can be used to perform mentioned commands below. Refer to the configuration section of [Kernel](#kernel) for more information regarding creating accounts.
@@ -481,7 +495,7 @@ Yes, there will be a reward program to incentivize early miners and users of Aio
 
 **Installation**
 
-* How do I install Aion and web3 interface?
+* How do I install Aion and Web3 interface?
 
 Please refer to the [Installation](#installation) section for the detailed steps.
 
