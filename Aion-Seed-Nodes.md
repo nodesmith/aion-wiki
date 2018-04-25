@@ -9,14 +9,6 @@ Here is the list of world regions and the seed nodes IP addresses representing t
 3. America South -> 191.232.176.213
 4. Asia East -> 52.231.206.150
 
-### Q1: Configuration file entries: config/config.xml
-```
-<nodes>
-  <node>p2p://2da62542-999f-4405-bdb3-50d8c61bed61@52.237.31.69:30303</node>
-  <node>p2p://c1f42646-279a-441e-bba7-bfebfc1eec63@52.179.100.107:30303</node>
-</nodes>
-```
-
 ### Q2/Ascent: Configuration file entries: config/config.xml
 ```
 <nodes>
