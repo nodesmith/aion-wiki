@@ -12,8 +12,6 @@ Here is the list of world regions and the seed nodes IP addresses representing t
 ### Q2/Ascent: Configuration file entries: config/config.xml
 ```
 <nodes>
-  <node>p2p://c33d1066-8c7e-496c-9c4e-c89318280274@13.92.155.115:30303</node>
-  <node>p2p://c33d2207-729a-4584-86f1-e19ab97cf9ce@51.144.42.220:30303</node>
   <node>p2p://c33d391d-a86d-408c-b6f7-13b1c1e810d7@13.95.218.95:30303</node>
   <node>p2p://c33d4535-5523-42fa-901d-f0dd8c269d7d@191.232.176.213:30303</node>
   <node>p2p://c33d5406-6359-4198-a15a-bbe3110390e8@52.231.206.150:30303</node>
