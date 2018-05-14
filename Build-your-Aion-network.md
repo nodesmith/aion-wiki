@@ -43,4 +43,8 @@ eg. aion-v0.1.12.2c5119a-2018-02-28.tar.bz2
 ### Execute your Aion network
 Please check the section **Aion Installation** in the [aion/README.md](https://github.com/aionnetwork/aion/blob/master/README.md)
 
+### For Developers
+To enable the google-java style pre-commit hook, open the command prompt and simply `cd` into the root of your Aion project and type:
+`cp .gitsettings/pre-commit .git/hooks/`
 
+Also note that to avoid style clashing with our license, at the top of each class that has a license displayed that begins with `/******...` (at least two * characters), simply add a single space between the first and second * characters as so: `/* *****...`
