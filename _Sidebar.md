@@ -1,6 +1,6 @@
 **Basics** 
 - [Home](https://github.com/aionnetwork/aion/wiki)
-- [Aion White Papers](https://aion.network/whitepapers.html)
+- [Aion White Papers](https://aion.network/developers/)
 - [Aion Owner's Manual](https://github.com/aionnetwork/aion/wiki/Aion-Owner's-Manual)
 - [Releases](https://github.com/aionnetwork/aion/releases)
 - [Initial Codebase Contributers](https://github.com/aionnetwork/aion/wiki/Contributors)
