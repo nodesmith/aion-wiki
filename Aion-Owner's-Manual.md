@@ -463,6 +463,8 @@ To report any issues after running and using the Aion Kernel, please find the fo
 
 * [Forum](https://forum.aion.network/): check out our forum to chat with the Aion community and moderators to stay up to date with latest updates, issues, resolutions and discussions.
 
+* [Gitter](https://gitter.im/aionnetwork/Lobby): join the conversation on Gitter, intended for technical questions and discussions.
+
 * Email us at [support@aion.network](support@aion.network) for any specific questions
 
 ## FAQs
