@@ -7,7 +7,7 @@ The complete file can be found in the `[aion_folder]/config/genesis.json`.
 An abbreviated version of the genesis file is shown below, followed by details regarding each parameter and its meaning.
 
 
-**This following code is the genesis file for the testnet - conquest**
+#### This following code is the genesis file for the testnet - conquest
 ```
 {
   "alloc": {
@@ -97,7 +97,7 @@ This field indicates the hash of the parent (preceding) block that this block is
 An arbitrary field that may be used to set messages. Typically this ends up being the signature of some participating mining pool. With respect to the test network, this field is set to be the hash of a special message.
 
 
-**Ths following code is the genesis for the current mainnet - Kilimanjaro**
+#### Ths following code is the genesis for the current mainnet - Kilimanjaro
 ```
 {
   "alloc": {
