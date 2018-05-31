@@ -14,6 +14,9 @@
 - [Genesis Block](https://github.com/aionnetwork/aion/wiki/Genesis-Block)
 - [Aion Seed Nodes](https://github.com/aionnetwork/aion/wiki/Aion-Seed-nodes)
 
+**For Developers**
+- [Aion License Header](https://github.com/aionnetwork/aion/wiki/Aion-License-Header)
+
 **Tutorials**
 - [Importing Accounts](https://github.com/aionnetwork/aion/wiki/Importing-Accounts)
 - [Reverting to Previous Blocks](https://github.com/aionnetwork/aion/wiki/Reverting-to-Previous-Blocks)
