@@ -90,3 +90,25 @@ To view your active peers in the kernel output enable the following:
 ```
 
 If you accidentally delete the seed nodes from your configuration, you can find them on the [seed nodes page](https://github.com/aionnetwork/aion/wiki/Aion-Seed-nodes). **Make sure to add the seed nodes for the network you want to connect to.**
+
+3. **Log system settings**: 
+You can set different log level in the log modules, you can select 5 type ERROR, WARN, INFO, DEBUG, TRACE as the log level. The TRACE level can get every log printout. If you don't want the log to store into your disk (just print it on the terminal), you can disable it in the <log-file> by set it to false.
+
+```xml
+<log>
+        <!--Enable/Disable logback service; if disabled, output will not be logged -->
+        <log-file>true</log-file>
+        <!--Sets the physical location on disk where log files will be stored.-->
+        <log-path>log</log-path>
+        <GEN>INFO</GEN>
+        <VM>ERROR</VM>
+        <SYNC>INFO</SYNC>
+        <CONS>INFO</CONS>
+        <DB>ERROR</DB>
+        <API>INFO</API>
+        <P2P>INFO</P2P>
+        <TX>INFO</TX>
+        <TXPOOL>INFO</TXPOOL>
+</log>
+
+```
