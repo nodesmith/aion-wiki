@@ -14,10 +14,15 @@ The current default database configuration is:
     <path>database</path>
     <vendor>leveldb</vendor>
     <enable_db_compression>false</enable_db_compression>
+    <check_integrity>true</check_integrity> <!--version 0.2.6 and after-->
+    <state-storage>FULL</state-storage> <!--version 0.2.8 and after-->
 </db>
 ```
+
 ---
-1. The **path** tag is used for setting the physical location on disk where data will be stored.
+### Database location
+
+The **path** tag is used for setting the physical location on disk where data will be stored.
 
 The path is relative with respect to the current folder. 
 
@@ -27,8 +32,11 @@ When setting the path for the database please make sure that:
 
 * Your application has writing privileges on that path.
 * There is no other database (using a different vendor) already using the path.
+
 ---
-2. The **vendor** tag is used for choosing the database driver/implementation.
+### Database type
+
+The **vendor** tag is used for choosing the database driver/implementation.
 
 The current vendor options are:
 * **leveldb**
@@ -40,8 +48,29 @@ If you are changing vendors, you must either:
 
 or
 * changes the path of the database to a new valid location. 
+
 ---
-3. The **enable_db_compression** tag customizes the behavior of the database to turn on or off its internal compression implementation. Enabling compression will reduce the storage space required, but may increase execution times for the different operations reading and writing to the database.
+### Data compression
+
+The **enable_db_compression** tag customizes the behavior of the database to turn on or off its internal compression implementation. Enabling compression will reduce the storage space required, but may increase execution times for the different operations reading and writing to the database.
+
+---
+### Data integrity
+
+The **check_integrity** tag allows enabling and disabling the data integrity checks at the kernel startup.
+
+---
+### State database pruning
+
+The **state-storage** tag allows setting the pruning mode for the state database. The options are:
+* `FULL` mode disables state pruning.
+* `TOP` mode stores the state only for the top 256 blocks. This mode limits sync to branching only within the stored blocks.
+* `SPREAD` mode stores the state only for the top 128 blocks and at regular intervals, namely each block for which the number is a multiple of 10000. This mode provides all the functionality of a full node, but with significantly decreased storage at the minor cost of some additional computations.
+
+The database can also be updated offline to the desired mode by running the command:
+```
+./aion.sh --state CHOSEN_MODE
+```
 
 ---
 ## Contents
