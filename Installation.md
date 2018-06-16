@@ -79,7 +79,7 @@ After running the kernel once, your configuration file will be updated with a pe
 If instead of a permanent id your configuration has an id placeholder, you only need to start the kernel to be assigned a permanent id. You can share this id with peers that want to add your node to their configuration file.
 During kernel run time your peer list will expand to include other active nodes. 
 
-To view your active peers in the kernel output enable the following:
+To view your active peers in the kernel output enable the following: (not exist after v0.2.8, this has been migrated into log system P2P module DEBUG level.)
 
 ```xml
 <net>
