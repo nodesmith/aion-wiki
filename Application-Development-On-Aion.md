@@ -5655,7 +5655,7 @@ listening for connections
 
 </details>
 
-#### <a name="acc-example"></a>Complete Examples
+#### <a name="net-example"></a>Complete Examples
 
 Each code example below retrieves and prints to the standard output the following:
 1. the syncing status,
