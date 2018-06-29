@@ -181,11 +181,11 @@ Note that if the kernel is running on a different machine or using a different p
 In each subsection below we provide code snippets illustrating the specific interaction with the API.
 
 To jump directly to the complete examples, click the links below:
-    - [account example](#acc-example)
-    - [block example](#blk-example)
-    - [transaction example](#tx-example)
-    - [contract example](#ctr-example)
-    - [network example](#net-example)
+- [account example](#acc-example)
+- [block example](#blk-example)
+- [transaction example](#tx-example)
+- [contract example](#ctr-example)
+- [network example](#net-example)
 
 To run the JavaScript code examples in a terminal, navigate to the test folder and run the script using:
 ```bash
