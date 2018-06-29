@@ -1,7 +1,7 @@
 This tutorial is designed to facilitate learning how to make projects that interact with the Aion kernel through its available APIs.
 Two APIs are provided to developers, the [Java API](https://github.com/aionnetwork/aion_api) and the [JSON-RPC (Web3) API](https://github.com/aionnetwork/aion_web3).
 
-The contents below show code examples by functionality and by JSON-RPC method. More examples will be gradually added.
+The contents below show code examples by functionality and by JSON-RPC method.
 
 <details>
 <summary><i><b>Contents by Topic</b></i></summary>
@@ -64,7 +64,17 @@ The contents below show code examples by functionality and by JSON-RPC method. M
     - [`net_version`](#network)
 
 </details>
+<br/>
 
+For functionality related to mining please review our reference miners implementations in the [aion_miner](https://github.com/aionnetwork/aion_miner) project.
+
+Additional API use examples are available in:
+* [Java API introduction and tutorial](https://github.com/aionnetwork/aion_api/wiki/Aion-Java-API-introduction-and-tutorial);
+* [Java API functionality tests](https://github.com/aionnetwork/aion_api/blob/master/test/org/aion/api/test/BaseAPITests.java);
+* [Java API contract tests](https://github.com/aionnetwork/aion_api/blob/master/test/org/aion/api/test/ContractTests.java);
+* [Aion Web3 wiki](https://github.com/aionnetwork/aion_web3/wiki) and [examples](https://github.com/aionnetwork/aion_web3/tree/master/example);
+* [Aion Web3 functionality tests](https://github.com/aionnetwork/aion_qa/tree/master/Web3/test);
+* [Aion Web3 contract storage test](https://github.com/aionnetwork/aion_qa/tree/master/TestBench/contractStorageTestWeb3).
 
 ## <a name="java"></a>Java API
 
