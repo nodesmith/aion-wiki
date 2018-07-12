@@ -16,6 +16,7 @@
 
 **For Developers**
 - [Aion License Header](https://github.com/aionnetwork/aion/wiki/Aion-License-Header)
+- [Migrating from Ethereum](https://github.com/aionnetwork/aion/wiki/Migrating-from-Ethereum)
 
 **Tutorials**
 - [Importing Accounts](https://github.com/aionnetwork/aion/wiki/Importing-Accounts)
