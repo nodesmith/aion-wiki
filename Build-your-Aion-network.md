@@ -43,7 +43,7 @@ eg. aion-v0.1.12.2c5119a-2018-02-28.tar.bz2
 If you want to build the project all from the source code. In step 3 of the How to build, you can use **ant full_build** to build all from source (It will take a while). 
 Also, for the pre-reqiure environmet, you need:
 1. Ubuntu 16.04 (if you want to build on top of the lastest ubuntu release, will require you to change the dependency of the build script in the aion_fastvm/script folder, the last ubuntu release doesn't has the libboost1.58 package)
-2. linux kernel package **libboost1.58-all-dev** and **libjsoncpp1** 
+2. linux kernel package **libboost1.58-all-dev**, **libjsoncpp1** and **cmake**
 
 
 ### Execute your Aion network
