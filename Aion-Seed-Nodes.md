@@ -4,7 +4,7 @@ Aion seed nodes are the 24/7 running nodes keeping the most adequate and reliabl
 ## Deployment details
 Here is the list of world regions and the seed nodes IP addresses representing them
 
-1. America North -> 13.92.155.115; 13.89.244.125; 66.207.217.190; 52.60.180.6
+1. America North -> 13.92.155.115; 13.89.244.125; 66.207.217.190
 2. Europe West -> 51.144.42.220
 3. America South -> 191.232.164.119
 4. Asia East -> 52.231.187.227
@@ -17,7 +17,6 @@ Here is the list of world regions and the seed nodes IP addresses representing t
     <node>p2p://c33d4c07-6a29-4ca6-8b06-b2781ba7f9bf@191.232.164.119:30303</node>
     <node>p2p://c33d5a94-20d8-49d9-97d6-284f88da5c21@13.89.244.125:30303</node>
     <node>p2p://741b979e-6a06-493a-a1f2-693cafd37083@66.207.217.190:30303</node>
-    <node>p2p://a684f46f-349a-48ce-b48a-86cb10caa00d@52.60.180.6:30303</node>
 </nodes>
 ```
 
