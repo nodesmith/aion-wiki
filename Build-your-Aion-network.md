@@ -39,13 +39,13 @@ ant pack_build
 or 
 ant
 ```
-6. Verify the code
+5. Verify the code
 You can go through the test cases by:
 ```
 ant test
 ```
 
-7. After build
+6. After build
 check your **pack** folder
 ```
 cd pack
