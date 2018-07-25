@@ -45,7 +45,7 @@ You can go through the test cases by:
 ant test
 ```
 
-6. After build
+7. After build
 check your **pack** folder
 ```
 cd pack
