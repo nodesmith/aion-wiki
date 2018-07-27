@@ -9,7 +9,8 @@
 
 1. install pre-required package
 ``` 
-sudo apt-get update && sudo apt-get install -y git g++ cmake wget llvm-4.0 lsb-release libjsoncpp1 libjsoncpp-dev libboost1.58-all-dev libzmq5
+sudo apt-get update
+sudo apt-get install -y git g++ cmake wget llvm-4.0 lsb-release libjsoncpp1 libjsoncpp-dev libboost1.58-all-dev libzmq5
 ```
 
 2. Clone the Aion project
