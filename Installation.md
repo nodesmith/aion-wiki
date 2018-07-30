@@ -110,5 +110,37 @@ You can set different log level in the log modules, you can select 5 type ERROR,
         <TX>INFO</TX>
         <TXPOOL>INFO</TXPOOL>
 </log>
-
 ```
+4. **Connecting via SSL**: 
+To connect to the kernel via SSL, you will first need to download `OpenSSL` <a href="https://www.openssl.org/source/">here</a>, version 1.1.1 or above. Older versions may work but they have not been tested and there is no guarantee.
+
+The next step is generating your own self-signed SSL certificate. The Aion kernel provides two easy means of generating this certificate. The first is by typing the command `./aion.sh -s create` and following the prompts. This will create a certificate that is valid for the host `localhost` and the IP address `127.0.0.1`. To customize the host and IP address of the certificate, instead use the command `./aion.sh -s create <hostname> <ip>` and follow the prompts.
+
+Once this step is complete a new directory called `ssl_keystore` will be created and your new self-signed certificate will be placed inside it. To use this certificate the following lines must be copy and pasted into the `config.xml` file:
+```xml
+<ssl>
+    <!--toggle ssl on/off (if you to access json-rpc over https)-->
+    <enabled>true</enabled>
+    <!--path to jks or pkcs12 ssl certificate-->
+    <cert>ssl_keystore/certificate</cert>
+</ssl>
+```
+`certificate` should be changed to match the file name of the certificate you wish to use inside the `ssl_keystore` directory. If you wish to store the certificate in a different directory altogether then modify the whole path appropriately. Just note that the kernel commands to create a new certificate will always create the new certificate inside the `ssl_keystore` directory. To disable the SSL connection simply set the `enabled` value to `false` instead.
+
+The code above should be pasted inside the `rpc` tag in the `config.xml` file so that your file should look something like the following:
+```xml
+<rpc active="true" ip="127.0.0.1" port="8545">
+    <!--boolean, enable/disable cross origin requests (browser enforced)-->
+    <cors-enabled>false</cors-enabled>
+    <!--comma-separated list, APIs available: web3,net,debug,personal,eth,stratum-->
+    <apis-enabled>web3,eth,personal,stratum</apis-enabled>
+    <ssl>
+        <!--toggle ssl on/off (if you to access json-rpc over https)-->
+        <enabled>true</enabled>
+        <!--path to jks or pkcs12 ssl certificate-->
+        <cert>ssl_keystore/certificate</cert>
+    </ssl>
+</rpc>
+```
+
+Now run the kernel using `./aion.sh` to connect via your new self-signed SSL certificate.
