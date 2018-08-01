@@ -4,7 +4,7 @@
 * [Oracle Java SE Development Kit 10](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 * [Apache Ant 1.10](http://ant.apache.org/bindownload.cgi)
 * 8GB RAM
-
+* CPU need to support SSE4.2
 ### How to build
 
 1. install pre-required package
