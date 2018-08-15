@@ -104,7 +104,7 @@ There are two options to import an existing account:
 
 Import with Private Key
 
-1. Input your private key (tutorial to obtain private key here)
+1. Input your private key (tutorial to obtain private key [here](https://aion.readme.io/v1.0/docs/using-aion-web3-console#section-obtain-private-key))
 1.  Create a password to use to unlock the account (Note: input this password correctly, currently there is no way to change this password)
 
 [[/images/gui/accounts-import-privkey.png|Import private key popup]]
