@@ -39,7 +39,7 @@ If you have an already-configured copy of Aion v.0.2.9+:
 <java active="true" ip="127.0.0.1" port="8547"></java>
 ```
 
-# Usage
+# Launch GUI
 
 From the `aion` directory, run the following command in a terminal to launch the GUI:
 
@@ -49,16 +49,23 @@ This window should open shortly:
 
 [[/images/gui/dashboard1.png|Dashboard upon launch]]
 
-## Kernel Control
+# Kernel Control
 
-## Account Management
+# Account Management
+
+Account management is performed in the "Accounts" screen of the GUI.  Upon first usage, the wallet will not have any accounts and will look like this:
+
+[[/images/gui/accounts-no-master-acct.png|Accounts screen with no accounts]]
 
 There are two options to initialize your wallet by adding an account:
 
-- Recover previous wallet (if you have an existing wallet from the Aion GUI with the corresponding mnemonic and password)
-- Create new account (new Aion GUI user)
+- [Recover previous wallet](#recover-wallet) - if you have an existing wallet from the Aion GUI with the corresponding mnemonic and password
+- [Create new account](#create-new-account) - new Aion GUI user
 
-### Recover wallet
+## Recover wallet
 
-- Click 
-## 
+- asdf
+
+## Create new account
+
+- qwerty
