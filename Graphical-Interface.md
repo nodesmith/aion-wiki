@@ -47,6 +47,8 @@ From the `aion` directory, run the following command in a terminal to launch the
 
 This window should open shortly:
 
+[[/images/gui/dashboard1.png|test img]]
+
 ## Kernel Control
 
 ## Account Management
