@@ -108,3 +108,31 @@ Import with Private Key
 1.  Create a password to use to unlock the account (Note: input this password correctly, currently there is no way to change this password)
 
 [[/images/gui/accounts-import-privkey.png|Import private key popup]]
+
+## Export Account
+
+You may wish to save your accounts created on the Aion Wallet elsewhere. In this case, you will need to export the wallet (using the icon right of the accounts listing) and save the keystore file in your desired location. Note that the password you input here will be the new password to access the keystore file:
+
+[[/images/gui/accounts-export.png|Export keystore popup]]
+
+# Transactions
+
+## Send Aion
+
+You have the option to transact AION and send it to another wallet. Note that this wallet must accept native AION coins.
+
+1. Make sure the account you wish to send AION from is unlocked under the "Accounts" listing (click on the lock icon to unlock an account)
+1. Navigate to the "Send" option in the GUI, and verify your account information on the left
+1. On the right panel, input the address you are sending to, and the amount to send in number of AION
+1. Click on "Generate transaction" to send the AION, and you will be notified when the transaction finishes
+
+[[/images/gui/send1.png|Send transaction screen]]
+
+## Receive Aion
+
+Under the "Receive" tab of the GUI, you can send your public wallet address by:
+
+- scanning the QR code to display the wallet address
+- copying the address to your desktop clipboard
+
+[[/images/gui/receive.png|Receive transaction screen]]
