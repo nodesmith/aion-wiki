@@ -13,8 +13,12 @@ To run the GUI, first download and extract the Aion kernel as per the _Getting t
 
 # Known issues & Limitations
 
-* Abnormal kernel termination (i.e. killed or crash) not gracefully handled -- details here..
-* Transaction history -- details here..
+* Abnormal kernel termination (i.e. killed or crash) not gracefully handled
+** Issue: if a kernel process is launched by the GUI and then terminated by some mechanism other than the GUI, the GUI may not notice this termination and enter an inconsistent state.  
+** Resolution: Exit GUI, delete file $HOME/.aion/kernel-pid, re-launch GUI
+* Transaction history updates 
+** Issue: recently-sent transactions sometimes are slow to appear 
+** Resolution: the transaction will show up given some time; for forcing a "refresh," can exit the GUI and re-open it and unlock the master account and once the transaction history loads, it will show the complete list
 
 # Set up
 
