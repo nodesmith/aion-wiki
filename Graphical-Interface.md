@@ -47,10 +47,18 @@ From the `aion` directory, run the following command in a terminal to launch the
 
 This window should open shortly:
 
-[[/images/gui/dashboard1.png|test img]]
+[[/images/gui/dashboard1.png|Dashboard upon launch]]
 
 ## Kernel Control
 
 ## Account Management
 
+There are two options to initialize your wallet by adding an account:
+
+- Recover previous wallet (if you have an existing wallet from the Aion GUI with the corresponding mnemonic and password)
+- Create new account (new Aion GUI user)
+
+### Recover wallet
+
+- Click 
 ## 
