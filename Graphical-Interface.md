@@ -30,6 +30,7 @@ To run the GUI, first download and extract the Aion kernel as per the _Getting t
 
 If setting up Aion for the first time:
 - Download and extract the Aion kernel as per the _Getting the Kernel_ step in the [Kernel section of the Aion Owner's Manual](https://github.com/aionnetwork/aion/wiki/Aion-Owner's-Manual#kernel).  
+- You should now have a directory named `aion` containing the Aion kernel and GUI
 
 If you have an already-configured copy of Aion v.0.2.9+:
 - Verify that in your config.xml file, ensure Java API is enabled [TODO: Put full path of mainnet config file]; i.e.:
@@ -39,6 +40,12 @@ If you have an already-configured copy of Aion v.0.2.9+:
 ```
 
 # Usage
+
+From the `aion` directory, run the following command in a terminal to launch the GUI:
+
+`./aion.sh`
+
+This window should open shortly:
 
 ## Kernel Control
 
