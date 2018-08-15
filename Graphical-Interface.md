@@ -51,32 +51,88 @@ This window should open shortly:
 
 # Kernel Control
 
+Coming soon!
+
 # Account Management
 
 Account management is performed in the "Accounts" screen of the GUI.  Upon first usage, the wallet will not have any accounts and will look like this:
 
 [[/images/gui/accounts-no-master-acct.png|Accounts screen with no accounts]]
 
+## Add a New Account
+
 There are two options to initialize your wallet by adding an account:
 
 - [Recover previous wallet](#recover-wallet) - if you have an existing wallet from the Aion GUI with the corresponding mnemonic and password
 - [Create new account](#create-new-account) - new Aion GUI user
 
-## Recover wallet
+### Recover wallet
 
-- Click "Add Account" from the Accounts screen
-- Under "Recover from seed," input mnemonic
-- Input corresponding wallet password
-- Click "Recover"
+1. Click "Add Account" from the Accounts screen
+1. Under "Recover from seed," input mnemonic
+1. Input corresponding wallet password
+1. Click "Recover"
 
-## Create new account
+### Create new account
 
-- Click "Add Account" from the Accounts screen
-- Under "Create account," input an account name (this can be edited later)
-- Input a password
-- Confirm chosen password
-- Save and backup the seed mnemonic that appears - you will need it if you wish to recover your wallet later:
+1. Click "Add Account" from the Accounts screen
+1. Under "Create account," input an account name (this can be edited later)
+1. Input a password
+1. Confirm chosen password
+1. Save and backup the seed mnemonic that appears - you will need it if you wish to recover your wallet later
+
+**Note: Clicking on "Add account" after creating the first account will automatically generate an account in your wallet.  These accounts cannot be removed from the wallet.**
 
 [[/images/gui/accounts-mnemonic-popup.png|Mnemonic popup]]
 
-- **Note: Clicking on "Add account" after creating the first account will automatically generate an account in your wallet.  These accounts cannot be removed from the wallet. **
+## Import account
+
+There are two options to import an existing account:
+
+- Import using a keystore file and password
+- Import using a private key (you will be asked to _create_ a password for it)
+
+**Remember Me**
+- There is a "Remember Me" option when importing accounts. Selecting this will display your imported accounts even if you re-launch your wallet. If this option is not selected, you will have to reimport these accounts if you re-launch the Aion Desktop Wallet.
+
+### Import with Keystore File
+
+1. Click on the keystore space, and navigate to select your desired Keystore UTC File
+1. Input corresponding keystore password:
+
+[[/images/gui/accounts-import-keystore.png|Import keystore popup]]
+
+Import with Private Key
+
+1. Input your private key (tutorial to obtain private key [here](https://aion.readme.io/v1.0/docs/using-aion-web3-console#section-obtain-private-key))
+1.  Create a password to use to unlock the account (Note: input this password correctly, currently there is no way to change this password)
+
+[[/images/gui/accounts-import-privkey.png|Import private key popup]]
+
+## Export Account
+
+You may wish to save your accounts created on the Aion Wallet elsewhere. In this case, you will need to export the wallet (using the icon right of the accounts listing) and save the keystore file in your desired location. Note that the password you input here will be the new password to access the keystore file:
+
+[[/images/gui/accounts-export.png|Export keystore popup]]
+
+# Transactions
+
+## Send Aion
+
+You have the option to transact AION and send it to another wallet. Note that this wallet must accept native AION coins.
+
+1. Make sure the account you wish to send AION from is unlocked under the "Accounts" listing (click on the lock icon to unlock an account)
+1. Navigate to the "Send" option in the GUI, and verify your account information on the left
+1. On the right panel, input the address you are sending to, and the amount to send in number of AION
+1. Click on "Generate transaction" to send the AION, and you will be notified when the transaction finishes
+
+[[/images/gui/send1.png|Send transaction screen]]
+
+## Receive Aion
+
+Under the "Receive" tab of the GUI, you can send your public wallet address by:
+
+- scanning the QR code to display the wallet address
+- copying the address to your desktop clipboard
+
+[[/images/gui/receive1.png|Receive transaction screen]]
