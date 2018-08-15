@@ -135,4 +135,4 @@ Under the "Receive" tab of the GUI, you can send your public wallet address by:
 - scanning the QR code to display the wallet address
 - copying the address to your desktop clipboard
 
-[[/images/gui/receive.png|Receive transaction screen]]
+[[/images/gui/receive1.png|Receive transaction screen]]
