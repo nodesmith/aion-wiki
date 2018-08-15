@@ -51,13 +51,19 @@ This window should open shortly:
 
 # Kernel Control
 
-Coming soon!
+## Launch/Terminate Kernel
+
+## Kernel Configuration
 
 # Account Management
 
 Account management is performed in the "Accounts" screen of the GUI.  Upon first usage, the wallet will not have any accounts and will look like this:
 
 [[/images/gui/accounts-no-master-acct.png|Accounts screen with no accounts]]
+
+Once a master account is created (see subsequent sections), the Accounts screen has an unlock button.  Click the Unlock button to unlock wallet.  After one minute of inactivity, the wallet automatically locks.
+
+[[/images/gui/accounts-with-master-acct.png|Accounts screen with an account]]
 
 ## Add a New Account
 
