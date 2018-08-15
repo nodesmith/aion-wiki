@@ -51,6 +51,8 @@ This window should open shortly:
 
 # Kernel Control
 
+Coming soon!
+
 # Account Management
 
 Account management is performed in the "Accounts" screen of the GUI.  Upon first usage, the wallet will not have any accounts and will look like this:
@@ -66,22 +68,22 @@ There are two options to initialize your wallet by adding an account:
 
 ### Recover wallet
 
-- Click "Add Account" from the Accounts screen
-- Under "Recover from seed," input mnemonic
-- Input corresponding wallet password
-- Click "Recover"
+1. Click "Add Account" from the Accounts screen
+1. Under "Recover from seed," input mnemonic
+1. Input corresponding wallet password
+1. Click "Recover"
 
 ### Create new account
 
-- Click "Add Account" from the Accounts screen
-- Under "Create account," input an account name (this can be edited later)
-- Input a password
-- Confirm chosen password
-- Save and backup the seed mnemonic that appears - you will need it if you wish to recover your wallet later:
+1. Click "Add Account" from the Accounts screen
+1. Under "Create account," input an account name (this can be edited later)
+1. Input a password
+1. Confirm chosen password
+1. Save and backup the seed mnemonic that appears - you will need it if you wish to recover your wallet later
+
+**Note: Clicking on "Add account" after creating the first account will automatically generate an account in your wallet.  These accounts cannot be removed from the wallet.**
 
 [[/images/gui/accounts-mnemonic-popup.png|Mnemonic popup]]
-
-- **Note: Clicking on "Add account" after creating the first account will automatically generate an account in your wallet.  These accounts cannot be removed from the wallet.**
 
 ## Import account
 
