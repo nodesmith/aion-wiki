@@ -79,4 +79,4 @@ There are two options to initialize your wallet by adding an account:
 
 [[/images/gui/accounts-mnemonic-popup.png|Mnemonic popup]]
 
-- **Note: Clicking on "Add account" after creating the first account will automatically generate an account in your wallet.  These accounts cannot be removed from the wallet. **
+- **Note: Clicking on "Add account" after creating the first account will automatically generate an account in your wallet.  These accounts cannot be removed from the wallet.**
