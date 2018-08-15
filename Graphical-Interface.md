@@ -7,7 +7,7 @@ Aion core includes a graphical interface, which facilitates kernel management an
 
 To run the GUI, first download and extract the Aion kernel as per the _Getting the Kernel_ step in the [Kernel section of the Aion Owner's Manual](https://github.com/aionnetwork/aion/wiki/Aion-Owner's-Manual#kernel).  Then, from the `aion` folder, run the following command:
 
-```xml
+```
 ./aion_gui.sh
 ```
 
@@ -34,7 +34,7 @@ If setting up Aion for the first time:
 If you have an already-configured copy of Aion v.0.2.9+:
 - Verify that in your config.xml file, ensure Java API is enabled [TODO: Put full path of mainnet config file]; i.e.:
 
-```
+```xml
 <java active="true" ip="127.0.0.1" port="8547"></java>
 ```
 
