@@ -22,8 +22,21 @@ To run the GUI, first download and extract the Aion kernel as per the _Getting t
 * GUI slow to connect to kernel API when launching kernel with large database
   * Issue: Upon launching the kernel process, it will run an integrity check to verify the blocks in its database.  During this time, the kernel is running, but the GUI cannot yet connect to it.  Therefore, with a large database, it will stay in the "CONNECTING..." state for some time with no feedback until this check is complete.
   * Resolution: Wait for the integrity check to complete; its progress can be monitored from the log file of the kernel.
+* Only Aion mainnet is supported currently
+  * Issue: GUI does not support launching the kernel to run on the testnet
+  * Resolution: None currently; support for other networks will be introduced in a subsequent release.
 
 # Set up
+
+If setting up Aion for the first time:
+- Download and extract the Aion kernel as per the _Getting the Kernel_ step in the [Kernel section of the Aion Owner's Manual](https://github.com/aionnetwork/aion/wiki/Aion-Owner's-Manual#kernel).  
+
+If you have an already-configured copy of Aion v.0.2.9+:
+- Verify that in your config.xml file, ensure Java API is enabled [TODO: Put full path of mainnet config file]; i.e.:
+
+```
+<java active="true" ip="127.0.0.1" port="8547"></java>
+```
 
 # Usage
 
