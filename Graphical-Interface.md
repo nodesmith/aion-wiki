@@ -64,8 +64,19 @@ There are two options to initialize your wallet by adding an account:
 
 ## Recover wallet
 
-- asdf
+- Click "Add Account" from the Accounts screen
+- Under "Recover from seed," input mnemonic
+- Input corresponding wallet password
+- Click "Recover"
 
 ## Create new account
 
-- qwerty
+- Click "Add Account" from the Accounts screen
+- Under "Create account," input an account name (this can be edited later)
+- Input a password
+- Confirm chosen password
+- Save and backup the seed mnemonic that appears - you will need it if you wish to recover your wallet later:
+
+[[/images/gui/accounts-mnemonic-popup.png|Mnemonic popup]]
+
+- **Note: Clicking on "Add account" after creating the first account will automatically generate an account in your wallet.  These accounts cannot be removed from the wallet. **
