@@ -7,7 +7,7 @@ Aion core includes a graphical interface, which facilitates kernel management an
 
 To run the GUI, first download and extract the Aion kernel as per the _Getting the Kernel_ step in the [Kernel section of the Aion Owner's Manual](https://github.com/aionnetwork/aion/wiki/Aion-Owner's-Manual#kernel).  Then, from the `aion` folder, run the following command:
 
-```
+```xml
 ./aion_gui.sh
 ```
 
