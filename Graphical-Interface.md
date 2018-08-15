@@ -13,7 +13,8 @@ To run the GUI, first download and extract the Aion kernel as per the _Getting t
 
 # Known issues & Limitations
 
-ABCDE
+* Abnormal kernel termination (i.e. killed or crash) not gracefully handled -- details here..
+* Transaction history -- details here..
 
 # Set up
 
