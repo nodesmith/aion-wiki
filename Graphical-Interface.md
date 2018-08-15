@@ -57,19 +57,21 @@ Account management is performed in the "Accounts" screen of the GUI.  Upon first
 
 [[/images/gui/accounts-no-master-acct.png|Accounts screen with no accounts]]
 
+## Add a New Account
+
 There are two options to initialize your wallet by adding an account:
 
 - [Recover previous wallet](#recover-wallet) - if you have an existing wallet from the Aion GUI with the corresponding mnemonic and password
 - [Create new account](#create-new-account) - new Aion GUI user
 
-## Recover wallet
+### Recover wallet
 
 - Click "Add Account" from the Accounts screen
 - Under "Recover from seed," input mnemonic
 - Input corresponding wallet password
 - Click "Recover"
 
-## Create new account
+### Create new account
 
 - Click "Add Account" from the Accounts screen
 - Under "Create account," input an account name (this can be edited later)
@@ -80,3 +82,27 @@ There are two options to initialize your wallet by adding an account:
 [[/images/gui/accounts-mnemonic-popup.png|Mnemonic popup]]
 
 - **Note: Clicking on "Add account" after creating the first account will automatically generate an account in your wallet.  These accounts cannot be removed from the wallet.**
+
+## Import account
+
+There are two options to import an existing account:
+
+- Import using a keystore file and password
+- Import using a private key (you will be asked to _create_ a password for it)
+
+**Remember Me**
+- There is a "Remember Me" option when importing accounts. Selecting this will display your imported accounts even if you re-launch your wallet. If this option is not selected, you will have to reimport these accounts if you re-launch the Aion Desktop Wallet.
+
+### Import with Keystore File
+
+1. Click on the keystore space, and navigate to select your desired Keystore UTC File
+1. Input corresponding keystore password:
+
+[[/images/gui/accounts-import-keystore.png|Import keystore popup]]
+
+Import with Private Key
+
+1. Input your private key (tutorial to obtain private key here)
+1.  Create a password to use to unlock the account (Note: input this password correctly, currently there is no way to change this password)
+
+[[/images/gui/accounts-import-privkey.png|Import private key popup]]
