@@ -52,7 +52,7 @@ If setting up Aion for the first time:
 - You should now have a directory named `aion` containing the Aion kernel and GUI
 
 If you have an already-configured copy of Aion v.0.2.9+:
-- Verify that in your config.xml file, ensure Java API is enabled [TODO: Put full path of mainnet config file]; i.e.:
+- Verify that in your config.xml (normally located at `config/config.xml` under the aion root directory) file, ensure Java API is enabled; i.e.:
 
 ```xml
 <java active="true" ip="127.0.0.1" port="8547"/>
