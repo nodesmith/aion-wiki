@@ -62,7 +62,7 @@ The GUI can be used to launch an instance of the kernel by clicking _Launch kern
 
 **Note: Upon kernel launch, it must run an integrity check for its database.  During this time, the GUI will be in CONNECTING state.  For large databases, this can take some time.**
 
-The GUI can only terminate a kernel instance that it launched.  Furthermore, it is expected that a system runs only one instance of the kernel at one time; i.e. ensure no other instance of the kernel is running before launching one from the GUI.
+The GUI can only terminate a kernel instance that it launched.  Furthermore, it is expected that a system runs only one instance of the kernel at one time; i.e. the user must ensure no other instance of the kernel is running before launching one from the GUI.
 
 When the GUI exits, the kernel does not automatically exit.  In this case, upon re-launching the GUI, it will remember the instance that it had previously launched.
 
