@@ -70,6 +70,14 @@ When the GUI exits, the kernel does not automatically exit.  In this case, upon 
 
 ## Kernel Configuration
 
+In the Settings screen, the GUI provides a built-in text editor for modifying the `config.xml` configuration file of the kernel.  The configuration can only be saved if the kernel is not currently running.
+
+[[/images/gui/settings1.png|Settings page]]
+
+Changes in the text editor are not saved until _Apply & save_ is clicked, which performs a basic XML validation before savings.
+
+If undesirable changes were made in the text editor, the original saved state of the file can be restored by clicking `Reset.`
+
 # Account Management
 
 Account management is performed in the "Accounts" screen of the GUI.  Upon first usage, the wallet will not have any accounts and will look like this:
