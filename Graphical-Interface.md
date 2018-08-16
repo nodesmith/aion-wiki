@@ -13,12 +13,12 @@ _**Work-in-progress: not yet ready for public consumption!**_
 [Recover wallet](#recover-wallet)  
 [Create new account](#create-new-account)  
 [Import account](#import-account)  
-[Import with Keystore File](#import-with-keystore-file)
-[Import with Private Key](#import-with-private-key)
-[Export Account](#export-account)
-[Transactions](#transactions)
-[Send Aion](#send-aion)
-[Receive Aion](#receive-aion)
+[Import with Keystore File](#import-with-keystore-file)  
+[Import with Private Key](#import-with-private-key)  
+[Export Account](#export-account)  
+[Transactions](#transactions)  
+[Send Aion](#send-aion)  
+[Receive Aion](#receive-aion)  
 
 # Overview
 
