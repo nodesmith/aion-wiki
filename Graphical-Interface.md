@@ -97,6 +97,8 @@ Changes in the text editor are not saved until _Apply & save_ is clicked, which 
 
 If undesirable changes were made in the text editor, the original saved state of the file can be restored by clicking `Reset.`
 
+For details on config.xml, refer to the ([Configure your kernel section of the Installation wiki](https://github.com/aionnetwork/aion/wiki/Installation#configure-your-kernel).  Note: disregard the instructions about creating an account from the CLI, since you can do so using the GUI instead.
+
 # Account Management
 
 Account management is performed in the "Accounts" screen of the GUI.  Upon first usage, the wallet will not have any accounts and will look like this:
