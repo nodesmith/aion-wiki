@@ -16,7 +16,7 @@ _**Work-in-progress: not yet ready for public consumption!**_
     - [Import with Keystore File](#import-with-keystore-file)  
     - [Import with Private Key](#import-with-private-key)  
   - [Export Account](#export-account)  
- - [Transactions](#transactions)  
+- [Transactions](#transactions)  
   - [Send Aion](#send-aion)  
   - [Receive Aion](#receive-aion)  
 
