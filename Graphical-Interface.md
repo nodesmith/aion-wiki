@@ -36,7 +36,7 @@ If you have an already-configured copy of Aion v.0.2.9+:
 - Verify that in your config.xml file, ensure Java API is enabled [TODO: Put full path of mainnet config file]; i.e.:
 
 ```xml
-<java active="true" ip="127.0.0.1" port="8547"></java>
+<java active="true" ip="127.0.0.1" port="8547"/>
 ```
 
 # Launch GUI
