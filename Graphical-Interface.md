@@ -74,7 +74,7 @@ In the Settings screen, the GUI provides a built-in text editor for modifying th
 
 [[/images/gui/settings1.png|Settings page]]
 
-Changes in the text editor are not saved until _Apply & save_ is clicked, which performs a basic XML validation before savings.
+Changes in the text editor are not saved until _Apply & save_ is clicked, which performs a basic XML validation before saving.
 
 If undesirable changes were made in the text editor, the original saved state of the file can be restored by clicking `Reset.`
 
