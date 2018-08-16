@@ -53,9 +53,13 @@ This window should open shortly:
 
 ## Launch/Terminate Kernel
 
-The GUI can be used to launch an instance of the kernel by clicking _Launch kernel_ in the dashboard screen shown above.  Afterward, it can be terminated by clicking _Terminate kernel_.  The GUI can only terminate a kernel instance that it launched.  Furthermore, it is expected that a system runs only one instance of the kernel at one time; i.e. ensure no other instance of the kernel is running before launching one from the GUI.
+The GUI can be used to launch an instance of the kernel by clicking _Launch kernel_ in the dashboard screen shown above.  Afterward, it can be terminated by clicking _Terminate kernel_, as shown in the figure below.
+
+The GUI can only terminate a kernel instance that it launched.  Furthermore, it is expected that a system runs only one instance of the kernel at one time; i.e. ensure no other instance of the kernel is running before launching one from the GUI.
 
 When the GUI exits, the kernel does not automatically exit.  In this case, upon re-launching the GUI, it will remember the instance that it had previously launched.
+
+[[/images/gui/dashboard-kernel-launched.png|Dashboard with launched kernel]]
 
 ## Kernel Configuration
 
