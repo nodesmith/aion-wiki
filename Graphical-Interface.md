@@ -53,7 +53,14 @@ This window should open shortly:
 
 ## Launch/Terminate Kernel
 
-The GUI can be used to launch an instance of the kernel by clicking _Launch kernel_ in the dashboard screen shown above.  Afterward, it can be terminated by clicking _Terminate kernel_, as shown in the figure below.
+The GUI can be used to launch an instance of the kernel by clicking _Launch kernel_ in the dashboard screen shown above.  After a kernel has been launched, it can be terminated by clicking _Terminate kernel_, as shown in the figure below.  The status of the kernel is indicated in the bottom-right corner.  There are three possible value:
+
+- NOT RUNNING: Kernel is not running
+- CONNECTING: Kernel is running; GUI has not yet connected to it, but a connection is in progress.
+- CONNECTED: Kernel is running and GUI is connected to it.
+- DISCONNECTED: Kernel is running; GUI is not connected to it.  This is the state when kernel termination is in progress, but kernel has not yet exited.
+
+**Note: Upon kernel launch, it must run an integrity check for its database.  During this time, the GUI will be in CONNECTING state.  For large databases, this can take some time.**
 
 The GUI can only terminate a kernel instance that it launched.  Furthermore, it is expected that a system runs only one instance of the kernel at one time; i.e. ensure no other instance of the kernel is running before launching one from the GUI.
 
