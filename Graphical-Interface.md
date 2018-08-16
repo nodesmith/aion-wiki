@@ -36,7 +36,7 @@ If you have an already-configured copy of Aion v.0.2.9+:
 - Verify that in your config.xml file, ensure Java API is enabled [TODO: Put full path of mainnet config file]; i.e.:
 
 ```xml
-<java active="true" ip="127.0.0.1" port="8547"></java>
+<java active="true" ip="127.0.0.1" port="8547"/>
 ```
 
 # Launch GUI
@@ -51,13 +51,27 @@ This window should open shortly:
 
 # Kernel Control
 
-Coming soon!
+## Launch/Terminate Kernel
+
+The GUI can be used to launch an instance of the kernel by clicking _Launch kernel_ in the dashboard screen shown above.  Afterward, it can be terminated by clicking _Terminate kernel_, as shown in the figure below.
+
+The GUI can only terminate a kernel instance that it launched.  Furthermore, it is expected that a system runs only one instance of the kernel at one time; i.e. ensure no other instance of the kernel is running before launching one from the GUI.
+
+When the GUI exits, the kernel does not automatically exit.  In this case, upon re-launching the GUI, it will remember the instance that it had previously launched.
+
+[[/images/gui/dashboard-kernel-launched.png|Dashboard with launched kernel]]
+
+## Kernel Configuration
 
 # Account Management
 
 Account management is performed in the "Accounts" screen of the GUI.  Upon first usage, the wallet will not have any accounts and will look like this:
 
 [[/images/gui/accounts-no-master-acct.png|Accounts screen with no accounts]]
+
+Once a master account is created (see subsequent sections), the Accounts screen has an unlock button.  Click the Unlock button to unlock wallet.  After one minute of inactivity, the wallet automatically locks.
+
+[[/images/gui/accounts-with-master-acct.png|Accounts screen with an account]]
 
 ## Add a New Account
 
@@ -102,7 +116,7 @@ There are two options to import an existing account:
 
 [[/images/gui/accounts-import-keystore.png|Import keystore popup]]
 
-Import with Private Key
+## Import with Private Key
 
 1. Input your private key (tutorial to obtain private key [here](https://aion.readme.io/v1.0/docs/using-aion-web3-console#section-obtain-private-key))
 1.  Create a password to use to unlock the account (Note: input this password correctly, currently there is no way to change this password)
