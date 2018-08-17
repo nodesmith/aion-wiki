@@ -1,5 +1,6 @@
-_**Work-in-progress: not yet ready for public consumption!**_
+_**Note: This documentation is intended for Aion release v0.2.9 and onward**_
 ***
+
 # Table of Contents
 - [Overview](#overview)  
 - [Known issues & Limitations](#known-issues--limitations)  
