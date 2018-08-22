@@ -18,7 +18,7 @@
 **For Developers**
 - [Aion License Header](https://github.com/aionnetwork/aion/wiki/Aion-License-Header)
 - [Migrating from Ethereum](https://github.com/aionnetwork/aion/wiki/Migrating-from-Ethereum)
-- [Migrating guild from Conquest to Mastery](https://github.com/aionnetwork/aion/wiki/Testnet-migration-guide-Q2-(Conquest)--to--Q3-(Mastery))
+- [Migrating guide from Conquest to Mastery](https://github.com/aionnetwork/aion/wiki/Testnet-migration-guide-Q2-(Conquest)--to--Q3-(Mastery))
 
 **Tutorials**
 - [Importing Accounts](https://github.com/aionnetwork/aion/wiki/Importing-Accounts)
