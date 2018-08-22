@@ -32,17 +32,20 @@ Usage: ./aion.sh [options] [arguments]
 **[1] Specifying datadir (-d) && network (-n)**
 ```
 ./aion.sh -n [valid network] -d [valid datadir]
+
+OR
+
 ./aion.sh -d [valid datadir] -n [valid network]
 ```
 Creates new directory and copies configuration files in (config.xml & genesis.json), with subpaths;
 ```
-/home/aion/datadir/network/config/config.xml
-/home/aion/datadir/network/config/genesis.json
-/home/aion/datadir/network/keystore
-/home/aion/datadir/network/database
-/home/aion/datadir/network/log
+/home/aion/[datadir]/[network]/config/config.xml
+/home/aion/[datadir]/[network]/config/genesis.json
+/home/aion/[datadir]/[network]/keystore
+/home/aion/[datadir]/[network]/database
+/home/aion/[datadir]/[network]/log
 ```
-> * Invalid parameters will not execute the kernel
+> - Invalid parameters will not execute the kernel
 
 **[2] Generating new config file (-c)**
 ```
@@ -53,18 +56,19 @@ Generates new config.xml file at base directory, either one of;
 /home/aion/config/mainnet/config.xml
 /home/aion/config/conquest/config.xml
 ```
-> * Invalid parameters will not generate new config file
-> * If the config folder does't exist, the config folder and xml file will be generated at base
+> - Invalid parameters will not generate new config file
+> - If the config folder does't exist, the config folder and config file will be generated at base
 
 **[3] Creating new accounts (-a)**
 ```
 ./aion.sh -a create -n [valid network] -d [valid datadir]
+./aion.sh -a list -n [valid network] -d [valid datadir]
+./aion.sh -a export [valid address] -n [valid network] -d [valid datadir]
+./aion.sh -a import [private key] -n [valid network] -d [valid datadir]
 ```
-Creates a new account using the specified datadir and network path (provided that the path exists). For example;
+Creates a new account using the specified datadir and network path. For example;
 ```
-./aion.sh -n conquest -d abc
-./aion.sh -a create -n conquest -d abc
-/home/aion/abc/conquest/keystore
+/home/aion/[datadir]/[network]/keystore
 ```
-> * Invalid parameters - or no parameters - will set to default keystore folder
-> * If the datadir folder doesn't exist, the keystore account will generate the new directory for it
+> - Invalid parameters - or no parameters - will set to default keystore folder
+> - If the datadir folder doesn't exist, the keystore account will generate the new directory for it
