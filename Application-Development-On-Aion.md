@@ -3183,9 +3183,77 @@ to: 0xa0bd0ef93902d9e123521a67bef7391e9487e963b2346ef3b3ff78208835545e,
 contractAddress: ,
 log:
 ```
+</details>
+
+
+
+<details>
+<summary><i>JavaScript Code</i></summary>
+<br/>
+
+* The `web3` constant is initialized as in the [example above](#web3-use).
+
+```js
+// specify accounts and amount
+let sender = 'a06f02e986965ddd3398c4de87e3708072ad58d96e9c53e87c31c8c970b211e5';
+let receiver = 'a0bd0ef93902d9e123521a67bef7391e9487e963b2346ef3b3ff78208835545e';
+let amount = 1000000000000000000; // = 1 AION
+
+// unlock sender
+let isUnlocked = web3.personal.unlockAccount(sender, "password", 100)
+let status = isUnlocked ? "unlocked" : "locked";
+console.log("sender account " + status);
+
+// perform transaction
+let txHash = web3.eth.sendTransaction({from: sender, to: receiver, value: amount});
+console.log("\ntransaction hash: " + txHash);
+
+// print receipt
+let txReceipt = web3.eth.getTransactionReceipt(txHash);
+// repeat till tx processed
+while (txReceipt == null) {
+  // wait 10 sec
+  sleep(10000);
+  txReceipt = web3.eth.getTransactionReceipt(txHash);
+}
+console.log("\ntransaction receipt:");
+console.log(txReceipt);
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+```
+
+* Sample output:
+
+```
+sender account unlocked
+
+transaction hash: 0x652109fcfdce09008df6a805c0dfb6294d0a1bb004268675c1402cc2819f01ea
+
+transaction receipt:
+{ blockHash: '0x863811cc0169e477375bafb2c223fb5e14f3b2965fe328143678dcb764b16298',
+  nrgPrice: '0x02540be400',
+  logsBloom: '00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+  nrgUsed: 21000,
+  contractAddress: null,
+  transactionIndex: 0,
+  transactionHash: '0x652109fcfdce09008df6a805c0dfb6294d0a1bb004268675c1402cc2819f01ea',
+  gasLimit: '0x07a120',
+  cumulativeNrgUsed: 21000,
+  gasUsed: '0x5208',
+  blockNumber: 257956,
+  root: '3267660f820bef9d7848a9324316be6e1db003165c8512c138ffa38a4d8fd374',
+  cumulativeGasUsed: '0x5208',
+  from: '0xa06f02e986965ddd3398c4de87e3708072ad58d96e9c53e87c31c8c970b211e5',
+  to: '0xa0bd0ef93902d9e123521a67bef7391e9487e963b2346ef3b3ff78208835545e',
+  logs: [],
+  gasPrice: '0x02540be400',
+  status: '0x1' }
+```
 
 </details>
-<br/>
+
 
 #### <a name="sign"></a>Perform signature from the given data
 
