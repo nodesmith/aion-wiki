@@ -3184,8 +3184,7 @@ contractAddress: ,
 log:
 ```
 </details>
-
-
+<br/>
 
 <details>
 <summary><i>JavaScript Code</i></summary>
