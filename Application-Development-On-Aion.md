@@ -3246,7 +3246,7 @@ transaction receipt:
 
 </details>
 
-#### <a name="raw-tx"></a>Perform Transaction with raw data
+#### <a name="raw-tx"></a>Perform Transaction with Raw Data
 
 The examples below show how to use the APIs to send a transaction with raw data. The functionality is compatible with [`eth_sendRawTransaction`](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_sendrawtransaction). In each code snippet, the transaction receipt is retrieved from the API and printed to the standard output. 
 
@@ -3376,11 +3376,11 @@ transaction receipt:
 </details>
 
 
-#### <a name="sign"></a>Perform signature from the given data
+#### <a name="sign"></a>Perform Signatures
 
-The examples below show how to use the APIs to use the user account to sign the given data and get the signature. The functionality is compatible with [`eth_sign`](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_sign). In each code snippet, the signature of the signed data is retrieved from the API and printed to the standard output.
+The example below shows how to use the web3 API to sign the given data using a given account and to get the signature. The functionality is compatible with [`eth_sign`](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_sign). In the code snippet below, the signature for the given data is retrieved from the API and printed to the standard output.
 
-Note that these examples only consider best case scenarios where the account can be unlocked.
+Note that this example only considers best case scenarios where the account can be unlocked.
 
 <details>
 <summary><i>JavaScript Code</i></summary>
