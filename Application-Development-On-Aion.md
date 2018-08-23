@@ -3398,7 +3398,7 @@ let isUnlocked = web3.personal.unlockAccount(signer, "password", 100)
 let status = isUnlocked ? "unlocked" : "locked";
 console.log("signer account " + status);
 
-// perform transaction
+// perform sign the data
 let signature = web3.eth.sign(signer, data);
 console.log("\signature of the data: " + signature);
 ```
