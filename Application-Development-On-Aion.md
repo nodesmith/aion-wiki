@@ -3138,6 +3138,128 @@ Note that these examples only consider best case scenarios where the account can
 
 ```java
 // specify accounts and amount
+        Address receiver = Address.wrap("a0bd0ef93902d9e123521a67bef7391e9487e963b2346ef3b3ff78208835545e");
+        BigInteger amount = BigInteger.valueOf(1_000_000_000_000_000_000L); // = 1 AION
+
+// create an ECKey object
+        byte[] pkSender = ByteUtil.hexStringToBytes("734538ff61084843f207f7fd5dab9d42157b42dc7931b27c558ff5409ff5ac858ae3f9cc3fa12f323435200397230f5dea56721d017753c65b9b6ee7bffbbb36");
+        ECKey ecKey = ECKeyFac.inst().create().fromPrivate(pkSender);
+
+// create transaction
+        BigInteger nonce = BigInteger.ZERO;
+        AionTransaction tx0 = new AionTransaction(nonce.toByteArray()
+            , receiver
+            , amount.toByteArray()
+            , new byte[0]
+            , NRG_LIMIT_TX_MAX
+            , NRG_PRICE_MIN);
+        tx0.sign(ecKey);
+
+// perform transaction
+        Hash256 txHash = ((MsgRsp) api.getTx().sendRawTransaction(ByteArrayWrapper.wrap(tx0.getEncoded())).getObject()).getTxHash();
+        System.out.format("%ntransaction hash: %s%n", txHash);
+
+// print receipt
+        TxReceipt txReceipt = api.getTx().getTxReceipt(txHash).getObject();
+
+// repeat till tx processed
+        while (txReceipt == null) {
+            // wait 10 sec
+            sleep(10000);
+            txReceipt = api.getTx().getTxReceipt(txHash).getObject();
+        }
+        System.out.format("%ntransaction receipt:%n%s%n", txReceipt);
+```
+
+* Sample output:
+
+```
+transaction hash: 2719a9bdb85b5e25ac3b11622fbdfe0f5e9e931fae7f9fb8b6e7a4c96807e0b3
+
+transaction receipt:
+txIndex: 0,
+blockNumber: 923,
+nrg: 21000,
+nrgCumulativeUsed: 21000,
+blockHash: 0x576153e865c3174f8d8ef0476c4c3abd8aa16ea968b78016f953867572c65388,
+txHash: 0x2719a9bdb85b5e25ac3b11622fbdfe0f5e9e931fae7f9fb8b6e7a4c96807e0b3,
+from: 0xa0290daf95c1ba93e1930a8ec6a82f1ca8f52ab2e0f3b2ef3f34ee90ae033504,
+to: 0xa0bd0ef93902d9e123521a67bef7391e9487e963b2346ef3b3ff78208835545e,
+contractAddress: ,
+log: 
+```
+</details>
+<br/>
+
+<details>
+<summary><i>JavaScript Code</i></summary>
+<br/>
+
+* The `web3` constant is initialized as in the [example above](#web3-use).
+
+```js
+// perform transaction by send raw data, the raw data is a rlp encoded transaction data including the nonce, receiver, value, data, energy limit, energy price and sender's signature. See details in the Java API example
+let txHash = web3.eth.sendRawTransaction('0xf8a500a0a0bd0ef93902d9e123521a67bef7391e9487e963b2346ef3b3ff78208835545e880de0b6b3a76400008088000574203a97ac1b831e84808800000002540be40001b8608ae3f9cc3fa12f32343$
+console.log("\ntransaction hash: " + txHash);
+
+// print receipt
+let txReceipt = web3.eth.getTransactionReceipt(txHash);
+// repeat till tx processed
+while (txReceipt == null) {
+  // wait 10 sec
+  sleep(10000);
+  txReceipt = web3.eth.getTransactionReceipt(txHash);
+}
+console.log("\ntransaction receipt:");
+console.log(txReceipt);
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+```
+
+* Sample output:
+
+```
+transaction hash: 0xabc04dc5e9c9a5be1b73972393c763552b6ebee2ef1bcdb4a3949f3f9283f4a0
+
+transaction receipt:
+{ blockHash: '0x5fc524d95122d778e0a7990e6b43481e43d19579daf4fbd25f3646a6ba535714',
+  nrgPrice: '0x02540be400',
+  logsBloom: '00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+  nrgUsed: 21000,
+  contractAddress: null,
+  transactionIndex: 0,
+  transactionHash: '0xabc04dc5e9c9a5be1b73972393c763552b6ebee2ef1bcdb4a3949f3f9283f4a0',
+  gasLimit: '0x1e8480',
+  cumulativeNrgUsed: 21000,
+  gasUsed: '0x5208',
+  blockNumber: 10,
+  root: '41f2aff0e31677906bc216c2805f9c9bd33e9959b442bed78a19c88f3698d683',
+  cumulativeGasUsed: '0x5208',
+  from: '0xa0290daf95c1ba93e1930a8ec6a82f1ca8f52ab2e0f3b2ef3f34ee90ae033504',
+  to: '0xa0bd0ef93902d9e123521a67bef7391e9487e963b2346ef3b3ff78208835545e',
+  logs: [],
+  gasPrice: '0x02540be400',
+  status: '0x1' }
+```
+
+</details>
+
+#### <a name="raw-tx"></a>Perform Transaction with raw data
+
+The examples below show how to use the APIs to send a transaction with raw data. The functionality is compatible with [`eth_sendRawTransaction`](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_sendrawtransaction). In each code snippet, the transaction receipt is retrieved from the API and printed to the standard output. 
+
+Note that these examples only consider best case scenarios where the transaction execution does not produce any errors and the transaction is eventually included in a block. A separate tutorial will be provided with the recommended sanity checks to ensure the sent transaction was included in the main chain.
+
+<details>
+<summary><i>Java Code</i></summary>
+<br/>
+
+* The `api` object is initialized as in the [example above](#java-use).
+
+```java
+// specify accounts and amount
 Address sender = Address.wrap("a06f02e986965ddd3398c4de87e3708072ad58d96e9c53e87c31c8c970b211e5");
 Address receiver = Address.wrap("a0bd0ef93902d9e123521a67bef7391e9487e963b2346ef3b3ff78208835545e");
 BigInteger amount = BigInteger.valueOf(1_000_000_000_000_000_000L); // = 1 AION
