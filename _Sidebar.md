@@ -14,6 +14,7 @@
 - [Internal Miner](https://github.com/aionnetwork/aion/wiki/Internal-Miner)
 - [Genesis Block](https://github.com/aionnetwork/aion/wiki/Genesis-Block)
 - [Aion Seed Nodes](https://github.com/aionnetwork/aion/wiki/Aion-Seed-nodes)
+- [JSON-RPC API Docs](https://github.com/aionnetwork/aion/wiki/JSON-RPC-API-Docs)
 
 **For Developers**
 - [Aion License Header](https://github.com/aionnetwork/aion/wiki/Aion-License-Header)
