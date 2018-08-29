@@ -19,7 +19,14 @@ Here is the list of world regions and the seed nodes IP addresses representing t
     <node>p2p://741b979e-6a06-493a-a1f2-693cafd37083@66.207.217.190:30303</node>
 </nodes>
 ```
-
+### Q3/Mastery: Configuration file entries: config/config.xml
+```
+<nodes>
+    <node>p2p://a30d1000-8c7e-496c-9c4e-c89318280274@168.62.170.146:30303</node>
+    <node>p2p://a30d2000-729a-4584-86f1-e19ab97cf9ce@23.96.22.19:30303</node>
+    <node>p2p://a30d3000-216b-47d4-ac44-5d8181b56e7e@137.117.56.84:30303</node>
+</nodes>
+```
 
 ### Q2.5/Conquest: Configuration file entries: config/config.xml
 ```
