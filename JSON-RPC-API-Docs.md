@@ -236,9 +236,11 @@ The default RPC configuration, with all settings explicitly declared (**Note:** 
 * `<api-methods-enabled>` - Comma delimited list of method names to enable in addition to those configured by the groups specified in the `<apis-enabled>` section
   * _possible values_: string listing the method names to enable. For example, the string `eth_blockNumber,eth_syncing` would enable the `eth_blockNumber` and `eth_syncing` methods.
   * _default_: Empty string
+  * *note*: Currently only available in the `master-pre-merge` branch 
 * `<api-methods-disabled>` - Comma delimited list of method names to disable from those configured by the groups specified in the `<apis-enabled>` section
   * _possible values_: string listing the method names to disable. For example, the string `personal_unlockAccount` would disable the `personal_unlockAccount` method if it was enabled by including `personal` in the `<apis-enabled>` section.
   * _default_: Empty string
+  * *note*: Currently only available in the `master-pre-merge` branch
 
 
 ## 5. APIs Enabled
