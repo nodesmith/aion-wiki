@@ -266,7 +266,7 @@ For security, the RPC server endpoints are grouped into "APIs" (collection of re
 * *ops* - api calls to be consumed by foundation supported software like [Aion Explorer](https://dashboard.aion.network). **Do not rely on these endpoints**, since they are subject to change.
 * *stratum* - api calls used by mining clients
 
-> **Note** for more granular control of which APIs are available, see the `<api-methods-enabled>` and `<api-methods-disabled>` options in [Advanced Settings](#4.3-advanced-settings)
+> **Note** for more granular control of which APIs are available, see the `<api-methods-enabled>` and `<api-methods-disabled>` options in [Advanced Settings](#43-advanced-settings)
 
 ## 6. RPC Server Vendor
 
