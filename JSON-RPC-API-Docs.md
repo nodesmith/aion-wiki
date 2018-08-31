@@ -1,5 +1,34 @@
 # RPC Server Features and Settings
 
+## 0. Contents
+
+- [1. Introduction](#1-introduction)
+- [2. Ethereum JSON RPC API Spec Deviations](#2-ethereum-json-rpc-api-spec-deviations)
+   - [2.1 Unsupported Endpoints](#21-unsupported-endpoints)
+   - [2.2 Implementation Deviations](#22-implementation-deviations)
+   - [2.3 Deprecated Endpoints](#23-deprecated-endpoints)
+   - [2.4 Filter Implementation](#24-filter-implementation)
+   - [2.4 Curl Behaviour](#25-curl-behaviour)  
+- [3. JSON RPC 2.0 (Google) Spec Deviations](#3-json-rpc-20-google-spec-deviations)
+- [4. Configurations Overview](#4-configurations-overview)
+   - [4.1 Connection Settings](#41-connection-settings)
+   - [4.2 Feature Toggles](#42-feature-toggles)
+   - [4.3 Advanced Settings](#43-advanced-settings)
+- [5. APIs Enabled](#5-apis-enabled)
+   - [5.1 API Groups Available](#51-api-groups-available)
+- [6. RPC Server Vendor](#6-rpc-server-vendor)
+- [7. RPC Server Performance & Resource Utilization (Advanced)](#7-rpc-server-performance--resource-utilization-advanced)
+   - [7.1 Worker Threads](#71-worker-threads)
+   - [7.2 IO Threads](#72-io-threads)
+   - [7.3 Request Queue Size](#73-request-queue-size)
+- [8 RPC Server Debugging Options](#8-rpc-server-debugging-options)
+   - [8.1 Logger Settings](#81-logger-settings)
+   - [8.2 Stuck Thread Detector (RPC Config Setting)](#82-stuck-thread-detector-rpc-config-setting)
+- [9. Enabling Cross-Origin Requests](#9-enabling-cross-origin-requests)
+- [10. Advanced Configurations](#10-advanced-configurations)
+- [11. RPC Server over HTTPS](#11-rpc-server-over-https-secured-via-ssl)
+   - [11.1 Generating Self Signed Certificates](#111-generating-self-signed-certificates)
+
 ## 1. Introduction
 
 The RPC server embedded in the Aion Kernel is an HTTP server that implements the [Ethereum JSON RPC Spec](https://github.com/ethereum/wiki/wiki/JSON-RPC) with minor exceptions listed below. In addition, the Aion RPC server is compliant with the [JSON RPC 2.0 Spec](https://www.jsonrpc.org/specification), with minor exceptions listed below.
@@ -187,7 +216,7 @@ The default RPC configuration, with all settings explicitly declared (**Note:** 
 * `<ssl>.<unsecured-pass>` - password for ssl certificate file
    * *possible values*: any valid string
 
-### 4.2 Advanced Settings
+### 4.3 Advanced Settings
 
 > **Note** that in most situations, there should be no reason to set or even declare these settings in your config file. Do not set these configurations unless you know exactly what you're doing.
 
