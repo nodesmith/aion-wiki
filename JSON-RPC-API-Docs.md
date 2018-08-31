@@ -12,7 +12,7 @@ The RPC server embedded in the Aion Kernel is an HTTP server that implements the
 
 Following are the details on the Aion Kernel RPC server's non-compliance & deviations with the [Ethereum JSON RPC API Spec](https://github.com/ethereum/wiki/wiki/JSON-RPC). **Apart from the below-mentioned exceptions, the Aion RPC server is in-compliance with all other requirements defined in the aforementioned specification.**
 
-### 2.1 Non-Implemented Endpoints 
+### 2.1 Unsupported Endpoints 
 
 The following methods were not implemented. Calling these methods will result in a METHOD_NOT_FOUND (-32601) error. Rationale for non-implementation is provided. 
 
