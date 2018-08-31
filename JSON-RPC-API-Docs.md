@@ -233,6 +233,13 @@ The default RPC configuration, with all settings explicitly declared (**Note:** 
    * *default*: NanoHttpd & Undertow: Unbounded
 * `<filters-enabled>` - enable / disable filters in rpc server
    * *possible values*: `false`, `true` (default)
+* `<api-methods-enabled>` - Comma delimited list of method names to enable in addition to those configured by the groups specified in the `<apis-enabled>` section
+  * _possible values_: string listing the method names to enable. For example, the string `eth_blockNumber,eth_syncing` would enable the `eth_blockNumber` and `eth_syncing` methods.
+  * _default_: Empty string
+* `<api-methods-disabled>` - Comma delimited list of method names to disable from those configured by the groups specified in the `<apis-enabled>` section
+  * _possible values_: string listing the method names to disable. For example, the string `personal_unlockAccount` would disable the `personal_unlockAccount` method if it was enabled by including `personal` in the `<apis-enabled>` section.
+  * _default_: Empty string
+
 
 ## 5. APIs Enabled
 
@@ -258,6 +265,8 @@ For security, the RPC server endpoints are grouped into "APIs" (collection of re
    * personal_newAccount
 * *ops* - api calls to be consumed by foundation supported software like [Aion Explorer](https://dashboard.aion.network). **Do not rely on these endpoints**, since they are subject to change.
 * *stratum* - api calls used by mining clients
+
+> **Note** for more granular control of which APIs are available, see the `<api-methods-enabled>` and `<api-methods-disabled>` options in [Advanced Settings](#4.3-advanced-settings)
 
 ## 6. RPC Server Vendor
 
